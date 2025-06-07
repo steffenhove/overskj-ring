@@ -10,84 +10,67 @@ import no.steffenhove.betongkalkulator.ui.model.OverskjaeringResult
 import no.steffenhove.betongkalkulator.ui.model.ThicknessValues
 import no.steffenhove.betongkalkulator.ui.utils.loadOverskjaeringData
 
+// ... (importer er viktige, spesielt for de nye dataklassene)
+// ...
+
 class OverskjaeringViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val overskjaeringData: List<OverskjaeringData> = loadOverskjaeringData(application)
+    private val overskjaeringDataList: List<OverskjaeringData> = loadOverskjaeringData(application)
 
     private val _result = MutableStateFlow<OverskjaeringResult?>(null)
     val result: StateFlow<OverskjaeringResult?> = _result
 
-    fun calculate(bladdiameter: Int, tykkelseCm: Int) {
-        Log.d("Overskjæring", "Input: blad=$bladdiameter, tykkelse=$tykkelseCm")
+    fun calculate(bladDiameter: Int, betongTykkelseCm: Int) {
+        // Finner riktig sett med data for valgt bladdiameter
+        val bladDataMap = overskjaeringDataList.find { it.bladeSize == bladDiameter }?.data
 
-        val bladeEntry = overskjaeringData.find { it.bladeSize == bladdiameter }
-        if (bladeEntry == null) {
-            Log.e("Overskjæring", "Fant ikke blad $bladdiameter")
-            _result.value = null
+        if (bladDataMap == null) {
+            _result.value = null // Dette skjer når bladdata ikke finnes
             return
         }
 
-        val dataMap = bladeEntry.data
-        if (dataMap == null) {
-            Log.e("Overskjæring", "Data for blad $bladdiameter er NULL")
-            _result.value = null
+        // Finner nærmeste lavere og høyere betongtykkelse i tabellen
+        val lavereTykkelseKey = bladDataMap.keys.filter { it <= betongTykkelseCm }.maxOrNull()
+        val hoyereTykkelseKey = bladDataMap.keys.filter { it >= betongTykkelseCm }.minOrNull()
+
+        if (lavereTykkelseKey == null || hoyereTykkelseKey == null) {
+            _result.value = null // Ugyldig tykkelse ift. tabellen
             return
         }
 
-        if (dataMap.isEmpty()) {
-            Log.e("Overskjæring", "DataMap for blad $bladdiameter er tomt")
-            _result.value = null
-            return
+        // Henter ThicknessValues-objekter for interpolasjon
+        val values1 = bladDataMap[lavereTykkelseKey]!!
+        val values2 = bladDataMap[hoyereTykkelseKey]!!
+
+        // Her må DU bestemme hvilke verdier fra JSON som skal brukes.
+        // La oss anta at "overcutCm" er det du bruker for "Maks. skjæring" (og borehull)
+        // og "minCutCm" er det du bruker for "Min. skjæring".
+        val overkapp1 = values1.overcutCm // "A-verdi"
+        val minSkjaering1 = values1.minCutCm // "B-verdi"
+
+        val overkapp2 = values2.overcutCm // "A-verdi"
+        val minSkjaering2 = values2.minCutCm // "B-verdi"
+
+        val interpolertOverkappCm: Float
+        val interpolertMinSkjaeringCm: Float
+
+        if (lavereTykkelseKey == hoyereTykkelseKey) {
+            interpolertOverkappCm = overkapp1
+            interpolertMinSkjaeringCm = minSkjaering1
+        } else {
+            val t = (betongTykkelseCm - lavereTykkelseKey).toFloat() / (hoyereTykkelseKey - lavereTykkelseKey).toFloat()
+            interpolertOverkappCm = overkapp1 + t * (overkapp2 - overkapp1)
+            interpolertMinSkjaeringCm = minSkjaering1 + t * (minSkjaering2 - minSkjaering1)
         }
 
-        Log.d("Overskjæring", "Tilgjengelige tykkelser: ${dataMap.keys.sorted()}")
-
-        val exact = dataMap[tykkelseCm]
-        if (exact != null) {
-            Log.d("Overskjæring", "Eksakt match for tykkelse $tykkelseCm")
-            _result.value = OverskjaeringResult(
-                minSkjaeringCm = exact.minCutCm,
-                maksSkjaeringCm = exact.maxCutCm,
-                minBorehullMm = exact.overcutCm * 10
-            )
-            return
-        }
-
-        val sorted = dataMap.entries.sortedBy { it.key }
-        val lavere = sorted.lastOrNull { it.key < tykkelseCm }
-        val hoyere = sorted.firstOrNull { it.key > tykkelseCm }
-
-        if (lavere == null || hoyere == null) {
-            Log.w("Overskjæring", "Kan ikke interpolere tykkelse $tykkelseCm")
-            _result.value = null
-            return
-        }
-
-        val interpolert = interpolateValues(
-            tykkelseCm,
-            lavere.key, lavere.value,
-            hoyere.key, hoyere.value
-        )
-
-        Log.d("Overskjæring", "Interpolert verdi generert")
+        // Beregn minste borehull basert på overkapp-lengden.
+        // Hvis overkapp kan være negativt, må du håndtere det her.
+        val minBorehullMm = if (interpolertOverkappCm > 0) interpolertOverkappCm * 10f else 0f
 
         _result.value = OverskjaeringResult(
-            minSkjaeringCm = interpolert.minCutCm,
-            maksSkjaeringCm = interpolert.maxCutCm,
-            minBorehullMm = interpolert.overcutCm * 10
-        )
-    }
-
-    private fun interpolateValues(
-        target: Int,
-        lowKey: Int, lowVal: ThicknessValues,
-        highKey: Int, highVal: ThicknessValues
-    ): ThicknessValues {
-        val fraction = (target - lowKey).toFloat() / (highKey - lowKey)
-        return ThicknessValues(
-            minCutCm = lowVal.minCutCm + fraction * (highVal.minCutCm - lowVal.minCutCm),
-            maxCutCm = lowVal.maxCutCm + fraction * (highVal.maxCutCm - lowVal.maxCutCm),
-            overcutCm = lowVal.overcutCm + fraction * (highVal.overcutCm - lowVal.overcutCm)
+            minSkjaeringCm = interpolertMinSkjaeringCm,
+            maksSkjaeringCm = interpolertOverkappCm,
+            minBorehullMm = minBorehullMm
         )
     }
 }

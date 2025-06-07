@@ -1,7 +1,9 @@
-package no.steffenhove.betongkalkulator.ui.model
+package no.steffenhove.betongkalkulator.ui.model // Sjekk at pakkenavnet er riktig
+
+import com.google.gson.annotations.SerializedName
 
 data class ThicknessValues(
-    val minCutCm: Float,
-    val maxCutCm: Float,
-    val overcutCm: Float
+    @SerializedName("minCutCm") val minCutCm: Float,
+    @SerializedName("maxCutCm") val maxCutCm: Float,
+    @SerializedName("overcutCm") val overcutCm: Float
 )
