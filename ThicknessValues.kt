@@ -1,4 +1,4 @@
-package no.steffenhove.betongkalkulator.ui.model // Sjekk at pakkenavnet er riktig
+package no.steffenhove.betongkalkulator.ui.model
 
 import com.google.gson.annotations.SerializedName
 

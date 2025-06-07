@@ -7,11 +7,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import no.steffenhove.betongkalkulator.ui.model.OverskjaeringData
 import no.steffenhove.betongkalkulator.ui.model.OverskjaeringResult
-import no.steffenhove.betongkalkulator.ui.model.ThicknessValues
 import no.steffenhove.betongkalkulator.ui.utils.loadOverskjaeringData
-
-// ... (importer er viktige, spesielt for de nye dataklassene)
-// ...
 
 class OverskjaeringViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -21,35 +17,35 @@ class OverskjaeringViewModel(application: Application) : AndroidViewModel(applic
     val result: StateFlow<OverskjaeringResult?> = _result
 
     fun calculate(bladDiameter: Int, betongTykkelseCm: Int) {
-        // Finner riktig sett med data for valgt bladdiameter
+        Log.d("OverskjæringDebug", "ViewModel.calculate kalt med Blad: $bladDiameter, Tykkelse: $betongTykkelseCm")
+        Log.d("OverskjæringDebug", "Totalt antall blad-datatyper lastet: ${overskjaeringDataList.size}")
+
         val bladDataMap = overskjaeringDataList.find { it.bladeSize == bladDiameter }?.data
+        Log.d("OverskjæringDebug", "Fant data for blad $bladDiameter? ${bladDataMap != null}")
 
         if (bladDataMap == null) {
-            _result.value = null // Dette skjer når bladdata ikke finnes
+            _result.value = null
             return
         }
 
-        // Finner nærmeste lavere og høyere betongtykkelse i tabellen
         val lavereTykkelseKey = bladDataMap.keys.filter { it <= betongTykkelseCm }.maxOrNull()
         val hoyereTykkelseKey = bladDataMap.keys.filter { it >= betongTykkelseCm }.minOrNull()
 
         if (lavereTykkelseKey == null || hoyereTykkelseKey == null) {
-            _result.value = null // Ugyldig tykkelse ift. tabellen
+            _result.value = null
             return
         }
 
-        // Henter ThicknessValues-objekter for interpolasjon
         val values1 = bladDataMap[lavereTykkelseKey]!!
         val values2 = bladDataMap[hoyereTykkelseKey]!!
 
-        // Her må DU bestemme hvilke verdier fra JSON som skal brukes.
-        // La oss anta at "overcutCm" er det du bruker for "Maks. skjæring" (og borehull)
-        // og "minCutCm" er det du bruker for "Min. skjæring".
-        val overkapp1 = values1.overcutCm // "A-verdi"
-        val minSkjaering1 = values1.minCutCm // "B-verdi"
+        // Her antar vi at 'overcutCm' er "Maks. skjæring" (A-verdi for borehull)
+        // og 'minCutCm' er "Min. skjæring" (B-verdi / potensiell dybde)
+        val overkapp1 = values1.overcutCm
+        val minSkjaering1 = values1.minCutCm
 
-        val overkapp2 = values2.overcutCm // "A-verdi"
-        val minSkjaering2 = values2.minCutCm // "B-verdi"
+        val overkapp2 = values2.overcutCm
+        val minSkjaering2 = values2.minCutCm
 
         val interpolertOverkappCm: Float
         val interpolertMinSkjaeringCm: Float
@@ -63,8 +59,6 @@ class OverskjaeringViewModel(application: Application) : AndroidViewModel(applic
             interpolertMinSkjaeringCm = minSkjaering1 + t * (minSkjaering2 - minSkjaering1)
         }
 
-        // Beregn minste borehull basert på overkapp-lengden.
-        // Hvis overkapp kan være negativt, må du håndtere det her.
         val minBorehullMm = if (interpolertOverkappCm > 0) interpolertOverkappCm * 10f else 0f
 
         _result.value = OverskjaeringResult(
