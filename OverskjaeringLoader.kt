@@ -20,13 +20,17 @@ fun loadOverskjaeringData(context: Context): List<OverskjaeringData> {
         val reader = InputStreamReader(inputStream)
         val gson = Gson()
 
-        // 1. Les JSON inn som en generell Map av Maps.
-        // Dette er en enklere type som Gson alltid vil håndtere.
-        val type = object : TypeToken<Map<String, Map<String, ThicknessValues>>>() {}.type
-        val rawData: Map<String, Map<String, ThicknessValues>> = gson.fromJson(reader, type)
-        Log.d(TAG, "Gson parsing til Map ferdig. Fant data for ${rawData.size} bladdiametere.")
+        // ENDRING HER: Vi leser JSON-teksten først og bruker en annen fromJson-metode
+        val jsonText = reader.readText()
 
-        // 2. Bygg listen manuelt fra Map'en
+        // Definerer typen på samme måte
+        val typeToken = object : TypeToken<Map<String, Map<String, ThicknessValues>>>() {}.type
+
+        // Bruker fromJson som tar en String som input
+        val rawData: Map<String, Map<String, ThicknessValues>> = gson.fromJson(jsonText, typeToken)
+        Log.d(TAG, "Gson parsing ferdig. Fant data for ${rawData.size} bladdiametere.")
+
+        // Konverterer den innleste Map'en til en Liste
         val overskjaeringList = rawData.map { (bladeSizeStr, thicknessMap) ->
             OverskjaeringData(
                 bladeSize = bladeSizeStr.toInt(),
