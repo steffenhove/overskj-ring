@@ -20,31 +20,24 @@ fun loadOverskjaeringData(context: Context): List<OverskjaeringData> {
         val reader = InputStreamReader(inputStream)
         val gson = Gson()
 
-        // Leser JSON som en Map, som matcher filstrukturen
-        val rawDataType = object : TypeToken<Map<String, Map<String, ThicknessValues>>>() {}.type
-        val rawData: Map<String, Map<String, ThicknessValues>> = gson.fromJson(reader, rawDataType)
-        Log.d(TAG, "Gson parsing ferdig. Fant data for ${rawData.size} bladdiametere.")
+        // 1. Les JSON inn som en generell Map av Maps.
+        // Dette er en enklere type som Gson alltid vil håndtere.
+        val type = object : TypeToken<Map<String, Map<String, ThicknessValues>>>() {}.type
+        val rawData: Map<String, Map<String, ThicknessValues>> = gson.fromJson(reader, type)
+        Log.d(TAG, "Gson parsing til Map ferdig. Fant data for ${rawData.size} bladdiametere.")
 
-        // Konverterer den innleste Map'en til en Liste
-        val overskjaeringList = mutableListOf<OverskjaeringData>()
-
-        rawData.forEach { (bladeSizeStr, thicknessDataMapStr) ->
-            val bladeSizeInt = bladeSizeStr.toIntOrNull()
-            if (bladeSizeInt != null) {
-                val finalThicknessDataMap = mutableMapOf<Int, ThicknessValues>()
-                thicknessDataMapStr.forEach { (thicknessStr, thicknessValuesObj) ->
-                    val thicknessInt = thicknessStr.toIntOrNull()
-                    if (thicknessInt != null) {
-                        finalThicknessDataMap[thicknessInt] = thicknessValuesObj
-                    }
+        // 2. Bygg listen manuelt fra Map'en
+        val overskjaeringList = rawData.map { (bladeSizeStr, thicknessMap) ->
+            OverskjaeringData(
+                bladeSize = bladeSizeStr.toInt(),
+                data = thicknessMap.mapKeys { (thicknessStr, _) ->
+                    thicknessStr.toInt()
                 }
-                if (finalThicknessDataMap.isNotEmpty()) {
-                    overskjaeringList.add(OverskjaeringData(bladeSizeInt, finalThicknessDataMap))
-                }
-            }
+            )
         }
-        Log.d(TAG, "Konvertering ferdig. Endelig listestørrelse: ${overskjaeringList.size}")
-        overskjaeringList
+
+        Log.d(TAG, "Konvertering til Liste ferdig. Endelig listestørrelse: ${overskjaeringList.size}")
+        return overskjaeringList
 
     } catch (e: Exception) {
         Log.e(TAG, "En FEIL oppstod under lasting av JSON-data:", e)
