@@ -1,0 +1,634 @@
+.
+├── build
+│   ├── generated
+│   │   ├── ap_generated_sources
+│   │   │   └── debug
+│   │   │       └── out
+│   │   ├── ksp
+│   │   │   └── debug
+│   │   │       ├── java
+│   │   │       └── kotlin
+│   │   └── res
+│   │       ├── pngs
+│   │       │   └── debug
+│   │       └── resValues
+│   │           ├── androidTest
+│   │           └── debug
+│   ├── intermediates
+│   │   ├── aar_metadata_check
+│   │   │   ├── debug
+│   │   │   └── debugAndroidTest
+│   │   ├── annotation_processor_list
+│   │   │   ├── debug
+│   │   │   │   └── annotationProcessors.json
+│   │   │   └── debugAndroidTest
+│   │   │       └── annotationProcessors.json
+│   │   ├── apk
+│   │   │   └── debug
+│   │   │       ├── app-debug.apk
+│   │   │       └── output-metadata.json
+│   │   ├── apk_ide_redirect_file
+│   │   │   └── debug
+│   │   │       └── redirect.txt
+│   │   ├── app_metadata
+│   │   │   └── debug
+│   │   │       └── app-metadata.properties
+│   │   ├── assets
+│   │   │   ├── debug
+│   │   │   │   └── overskjaering_interpolert.json
+│   │   │   └── debugAndroidTest
+│   │   ├── compatible_screen_manifest
+│   │   │   └── debug
+│   │   │       └── output-metadata.json
+│   │   ├── compile_and_runtime_not_namespaced_r_class_jar
+│   │   │   ├── debug
+│   │   │   │   └── R.jar
+│   │   │   └── debugAndroidTest
+│   │   │       └── R.jar
+│   │   ├── compressed_assets
+│   │   │   ├── debug
+│   │   │   │   └── out
+│   │   │   └── debugAndroidTest
+│   │   │       └── out
+│   │   ├── data_binding_layout_info_type_merge
+│   │   │   ├── debug
+│   │   │   │   └── out
+│   │   │   └── debugAndroidTest
+│   │   │       └── out
+│   │   ├── data_binding_layout_info_type_package
+│   │   │   └── debug
+│   │   │       └── out
+│   │   ├── desugar_graph
+│   │   │   └── debug
+│   │   │       └── out
+│   │   ├── dex
+│   │   │   ├── debug
+│   │   │   │   ├── mergeExtDexDebug
+│   │   │   │   ├── mergeLibDexDebug
+│   │   │   │   └── mergeProjectDexDebug
+│   │   │   └── debugAndroidTest
+│   │   │       ├── mergeExtDexDebugAndroidTest
+│   │   │       └── mergeLibDexDebugAndroidTest
+│   │   ├── dex_archive_input_jar_hashes
+│   │   │   └── debug
+│   │   │       └── out
+│   │   ├── dex_number_of_buckets_file
+│   │   │   └── debug
+│   │   │       └── out
+│   │   ├── duplicate_classes_check
+│   │   │   ├── debug
+│   │   │   └── debugAndroidTest
+│   │   ├── external_file_lib_dex_archives
+│   │   │   ├── debug
+│   │   │   └── debugAndroidTest
+│   │   ├── external_libs_dex_archive
+│   │   │   └── debug
+│   │   │       └── out
+│   │   ├── external_libs_dex_archive_with_artifact_transforms
+│   │   │   └── debug
+│   │   │       └── out
+│   │   ├── global_synthetics_dex
+│   │   │   └── debug
+│   │   ├── global_synthetics_external_lib
+│   │   │   └── debug
+│   │   │       └── out
+│   │   ├── global_synthetics_external_libs_artifact_transform
+│   │   │   └── debug
+│   │   │       └── out
+│   │   ├── global_synthetics_file_lib
+│   │   │   ├── debug
+│   │   │   └── debugAndroidTest
+│   │   ├── global_synthetics_mixed_scope
+│   │   │   └── debug
+│   │   │       └── out
+│   │   ├── global_synthetics_project
+│   │   │   └── debug
+│   │   │       └── out
+│   │   ├── global_synthetics_subproject
+│   │   │   └── debug
+│   │   │       └── out
+│   │   ├── incremental
+│   │   │   ├── debug
+│   │   │   │   ├── mergeDebugResources
+│   │   │   │   └── packageDebugResources
+│   │   │   ├── debug-mergeJavaRes
+│   │   │   │   ├── merge-state
+│   │   │   │   └── zip-cache
+│   │   │   ├── debugAndroidTest
+│   │   │   │   └── mergeDebugAndroidTestResources
+│   │   │   ├── mergeDebugAndroidTestAssets
+│   │   │   │   └── merger.xml
+│   │   │   ├── mergeDebugAndroidTestJniLibFolders
+│   │   │   │   └── merger.xml
+│   │   │   ├── mergeDebugAndroidTestShaders
+│   │   │   │   └── merger.xml
+│   │   │   ├── mergeDebugAssets
+│   │   │   │   └── merger.xml
+│   │   │   ├── mergeDebugJniLibFolders
+│   │   │   │   └── merger.xml
+│   │   │   ├── mergeDebugShaders
+│   │   │   │   └── merger.xml
+│   │   │   └── packageDebug
+│   │   │       └── tmp
+│   │   ├── java_res
+│   │   │   └── debug
+│   │   │       └── out
+│   │   ├── javac
+│   │   │   └── debug
+│   │   │       └── classes
+│   │   ├── local_only_symbol_list
+│   │   │   └── debug
+│   │   │       └── R-def.txt
+│   │   ├── manifest_merge_blame_file
+│   │   │   ├── debug
+│   │   │   │   └── manifest-merger-blame-debug-report.txt
+│   │   │   └── debugAndroidTest
+│   │   │       └── manifest-merger-blame-debug-androidTest-report.txt
+│   │   ├── merged_java_res
+│   │   │   └── debug
+│   │   │       └── base.jar
+│   │   ├── merged_jni_libs
+│   │   │   ├── debug
+│   │   │   │   └── out
+│   │   │   └── debugAndroidTest
+│   │   │       └── out
+│   │   ├── merged_manifest
+│   │   │   └── debug
+│   │   │       └── AndroidManifest.xml
+│   │   ├── merged_manifests
+│   │   │   └── debug
+│   │   │       ├── AndroidManifest.xml
+│   │   │       └── output-metadata.json
+│   │   ├── merged_native_libs
+│   │   │   └── debug
+│   │   │       └── out
+│   │   ├── merged_res
+│   │   │   ├── debug
+│   │   │   │   ├── drawable-anydpi-v24_ic_launcher_foreground.xml.flat
+│   │   │   │   ├── drawable-hdpi_ic_launcher_foreground.png.flat
+│   │   │   │   ├── drawable-ldpi_ic_launcher_foreground.png.flat
+│   │   │   │   ├── drawable-mdpi_ic_launcher_foreground.png.flat
+│   │   │   │   ├── drawable-xhdpi_ic_launcher_foreground.png.flat
+│   │   │   │   ├── drawable-xxhdpi_ic_launcher_foreground.png.flat
+│   │   │   │   ├── drawable-xxxhdpi_ic_launcher_foreground.png.flat
+│   │   │   │   ├── drawable_ic_launcher_background.xml.flat
+│   │   │   │   ├── mipmap-anydpi-v26_ic_launcher.xml.flat
+│   │   │   │   ├── mipmap-anydpi-v26_ic_launcher_round.xml.flat
+│   │   │   │   ├── mipmap-hdpi_ic_launcher.webp.flat
+│   │   │   │   ├── mipmap-hdpi_ic_launcher_round.webp.flat
+│   │   │   │   ├── mipmap-mdpi_ic_launcher.webp.flat
+│   │   │   │   ├── mipmap-mdpi_ic_launcher_round.webp.flat
+│   │   │   │   ├── mipmap-xhdpi_ic_launcher.webp.flat
+│   │   │   │   ├── mipmap-xhdpi_ic_launcher_round.webp.flat
+│   │   │   │   ├── mipmap-xxhdpi_ic_launcher.webp.flat
+│   │   │   │   ├── mipmap-xxhdpi_ic_launcher_round.webp.flat
+│   │   │   │   ├── mipmap-xxxhdpi_ic_launcher.webp.flat
+│   │   │   │   ├── mipmap-xxxhdpi_ic_launcher_round.webp.flat
+│   │   │   │   ├── values-af_values-af.arsc.flat
+│   │   │   │   ├── values-am_values-am.arsc.flat
+│   │   │   │   ├── values-ar_values-ar.arsc.flat
+│   │   │   │   ├── values-as_values-as.arsc.flat
+│   │   │   │   ├── values-az_values-az.arsc.flat
+│   │   │   │   ├── values-b+es+419_values-b+es+419.arsc.flat
+│   │   │   │   ├── values-b+sr+Latn_values-b+sr+Latn.arsc.flat
+│   │   │   │   ├── values-be_values-be.arsc.flat
+│   │   │   │   ├── values-bg_values-bg.arsc.flat
+│   │   │   │   ├── values-bn_values-bn.arsc.flat
+│   │   │   │   ├── values-bs_values-bs.arsc.flat
+│   │   │   │   ├── values-ca_values-ca.arsc.flat
+│   │   │   │   ├── values-cs_values-cs.arsc.flat
+│   │   │   │   ├── values-da_values-da.arsc.flat
+│   │   │   │   ├── values-de_values-de.arsc.flat
+│   │   │   │   ├── values-el_values-el.arsc.flat
+│   │   │   │   ├── values-en-rAU_values-en-rAU.arsc.flat
+│   │   │   │   ├── values-en-rCA_values-en-rCA.arsc.flat
+│   │   │   │   ├── values-en-rGB_values-en-rGB.arsc.flat
+│   │   │   │   ├── values-en-rIN_values-en-rIN.arsc.flat
+│   │   │   │   ├── values-en-rXC_values-en-rXC.arsc.flat
+│   │   │   │   ├── values-en_values-en.arsc.flat
+│   │   │   │   ├── values-es-rUS_values-es-rUS.arsc.flat
+│   │   │   │   ├── values-es_values-es.arsc.flat
+│   │   │   │   ├── values-et_values-et.arsc.flat
+│   │   │   │   ├── values-eu_values-eu.arsc.flat
+│   │   │   │   ├── values-fa_values-fa.arsc.flat
+│   │   │   │   ├── values-fi_values-fi.arsc.flat
+│   │   │   │   ├── values-fr-rCA_values-fr-rCA.arsc.flat
+│   │   │   │   ├── values-fr_values-fr.arsc.flat
+│   │   │   │   ├── values-gl_values-gl.arsc.flat
+│   │   │   │   ├── values-gu_values-gu.arsc.flat
+│   │   │   │   ├── values-h320dp-port-v13_values-h320dp-port-v13.arsc.flat
+│   │   │   │   ├── values-h360dp-land-v13_values-h360dp-land-v13.arsc.flat
+│   │   │   │   ├── values-h480dp-land-v13_values-h480dp-land-v13.arsc.flat
+│   │   │   │   ├── values-h550dp-port-v13_values-h550dp-port-v13.arsc.flat
+│   │   │   │   ├── values-h720dp-v13_values-h720dp-v13.arsc.flat
+│   │   │   │   ├── values-hdpi-v4_values-hdpi-v4.arsc.flat
+│   │   │   │   ├── values-hi_values-hi.arsc.flat
+│   │   │   │   ├── values-hr_values-hr.arsc.flat
+│   │   │   │   ├── values-hu_values-hu.arsc.flat
+│   │   │   │   ├── values-hy_values-hy.arsc.flat
+│   │   │   │   ├── values-in_values-in.arsc.flat
+│   │   │   │   ├── values-is_values-is.arsc.flat
+│   │   │   │   ├── values-it_values-it.arsc.flat
+│   │   │   │   ├── values-iw_values-iw.arsc.flat
+│   │   │   │   ├── values-ja_values-ja.arsc.flat
+│   │   │   │   ├── values-ka_values-ka.arsc.flat
+│   │   │   │   ├── values-kk_values-kk.arsc.flat
+│   │   │   │   ├── values-km_values-km.arsc.flat
+│   │   │   │   ├── values-kn_values-kn.arsc.flat
+│   │   │   │   ├── values-ko_values-ko.arsc.flat
+│   │   │   │   ├── values-ky_values-ky.arsc.flat
+│   │   │   │   ├── values-land_values-land.arsc.flat
+│   │   │   │   ├── values-large-v4_values-large-v4.arsc.flat
+│   │   │   │   ├── values-ldltr-v21_values-ldltr-v21.arsc.flat
+│   │   │   │   ├── values-ldrtl-v17_values-ldrtl-v17.arsc.flat
+│   │   │   │   ├── values-lo_values-lo.arsc.flat
+│   │   │   │   ├── values-lt_values-lt.arsc.flat
+│   │   │   │   ├── values-lv_values-lv.arsc.flat
+│   │   │   │   ├── values-mk_values-mk.arsc.flat
+│   │   │   │   ├── values-ml_values-ml.arsc.flat
+│   │   │   │   ├── values-mn_values-mn.arsc.flat
+│   │   │   │   ├── values-mr_values-mr.arsc.flat
+│   │   │   │   ├── values-ms_values-ms.arsc.flat
+│   │   │   │   ├── values-my_values-my.arsc.flat
+│   │   │   │   ├── values-nb_values-nb.arsc.flat
+│   │   │   │   ├── values-ne_values-ne.arsc.flat
+│   │   │   │   ├── values-night-v8_values-night-v8.arsc.flat
+│   │   │   │   ├── values-nl_values-nl.arsc.flat
+│   │   │   │   ├── values-or_values-or.arsc.flat
+│   │   │   │   ├── values-pa_values-pa.arsc.flat
+│   │   │   │   ├── values-pl_values-pl.arsc.flat
+│   │   │   │   ├── values-port_values-port.arsc.flat
+│   │   │   │   ├── values-pt-rBR_values-pt-rBR.arsc.flat
+│   │   │   │   ├── values-pt-rPT_values-pt-rPT.arsc.flat
+│   │   │   │   ├── values-pt_values-pt.arsc.flat
+│   │   │   │   ├── values-ro_values-ro.arsc.flat
+│   │   │   │   ├── values-ru_values-ru.arsc.flat
+│   │   │   │   ├── values-si_values-si.arsc.flat
+│   │   │   │   ├── values-sk_values-sk.arsc.flat
+│   │   │   │   ├── values-sl_values-sl.arsc.flat
+│   │   │   │   ├── values-small-v4_values-small-v4.arsc.flat
+│   │   │   │   ├── values-sq_values-sq.arsc.flat
+│   │   │   │   ├── values-sr_values-sr.arsc.flat
+│   │   │   │   ├── values-sv_values-sv.arsc.flat
+│   │   │   │   ├── values-sw600dp-v13_values-sw600dp-v13.arsc.flat
+│   │   │   │   ├── values-sw_values-sw.arsc.flat
+│   │   │   │   ├── values-ta_values-ta.arsc.flat
+│   │   │   │   ├── values-te_values-te.arsc.flat
+│   │   │   │   ├── values-th_values-th.arsc.flat
+│   │   │   │   ├── values-tl_values-tl.arsc.flat
+│   │   │   │   ├── values-tr_values-tr.arsc.flat
+│   │   │   │   ├── values-uk_values-uk.arsc.flat
+│   │   │   │   ├── values-ur_values-ur.arsc.flat
+│   │   │   │   ├── values-uz_values-uz.arsc.flat
+│   │   │   │   ├── values-v16_values-v16.arsc.flat
+│   │   │   │   ├── values-v17_values-v17.arsc.flat
+│   │   │   │   ├── values-v18_values-v18.arsc.flat
+│   │   │   │   ├── values-v21_values-v21.arsc.flat
+│   │   │   │   ├── values-v22_values-v22.arsc.flat
+│   │   │   │   ├── values-v23_values-v23.arsc.flat
+│   │   │   │   ├── values-v24_values-v24.arsc.flat
+│   │   │   │   ├── values-v25_values-v25.arsc.flat
+│   │   │   │   ├── values-v26_values-v26.arsc.flat
+│   │   │   │   ├── values-v28_values-v28.arsc.flat
+│   │   │   │   ├── values-v30_values-v30.arsc.flat
+│   │   │   │   ├── values-v31_values-v31.arsc.flat
+│   │   │   │   ├── values-v34_values-v34.arsc.flat
+│   │   │   │   ├── values-vi_values-vi.arsc.flat
+│   │   │   │   ├── values-w320dp-land-v13_values-w320dp-land-v13.arsc.flat
+│   │   │   │   ├── values-w360dp-port-v13_values-w360dp-port-v13.arsc.flat
+│   │   │   │   ├── values-w400dp-port-v13_values-w400dp-port-v13.arsc.flat
+│   │   │   │   ├── values-w600dp-land-v13_values-w600dp-land-v13.arsc.flat
+│   │   │   │   ├── values-watch-v20_values-watch-v20.arsc.flat
+│   │   │   │   ├── values-watch-v21_values-watch-v21.arsc.flat
+│   │   │   │   ├── values-xlarge-v4_values-xlarge-v4.arsc.flat
+│   │   │   │   ├── values-zh-rCN_values-zh-rCN.arsc.flat
+│   │   │   │   ├── values-zh-rHK_values-zh-rHK.arsc.flat
+│   │   │   │   ├── values-zh-rTW_values-zh-rTW.arsc.flat
+│   │   │   │   ├── values-zu_values-zu.arsc.flat
+│   │   │   │   ├── values_values.arsc.flat
+│   │   │   │   ├── xml_backup_rules.xml.flat
+│   │   │   │   └── xml_data_extraction_rules.xml.flat
+│   │   │   └── debugAndroidTest
+│   │   │       ├── values-af_values-af.arsc.flat
+│   │   │       ├── values-am_values-am.arsc.flat
+│   │   │       ├── values-ar_values-ar.arsc.flat
+│   │   │       ├── values-as_values-as.arsc.flat
+│   │   │       ├── values-az_values-az.arsc.flat
+│   │   │       ├── values-b+sr+Latn_values-b+sr+Latn.arsc.flat
+│   │   │       ├── values-be_values-be.arsc.flat
+│   │   │       ├── values-bg_values-bg.arsc.flat
+│   │   │       ├── values-bn_values-bn.arsc.flat
+│   │   │       ├── values-bs_values-bs.arsc.flat
+│   │   │       ├── values-ca_values-ca.arsc.flat
+│   │   │       ├── values-cs_values-cs.arsc.flat
+│   │   │       ├── values-da_values-da.arsc.flat
+│   │   │       ├── values-de_values-de.arsc.flat
+│   │   │       ├── values-el_values-el.arsc.flat
+│   │   │       ├── values-en-rAU_values-en-rAU.arsc.flat
+│   │   │       ├── values-en-rCA_values-en-rCA.arsc.flat
+│   │   │       ├── values-en-rGB_values-en-rGB.arsc.flat
+│   │   │       ├── values-en-rIN_values-en-rIN.arsc.flat
+│   │   │       ├── values-en-rXC_values-en-rXC.arsc.flat
+│   │   │       ├── values-es-rUS_values-es-rUS.arsc.flat
+│   │   │       ├── values-es_values-es.arsc.flat
+│   │   │       ├── values-et_values-et.arsc.flat
+│   │   │       ├── values-eu_values-eu.arsc.flat
+│   │   │       ├── values-fa_values-fa.arsc.flat
+│   │   │       ├── values-fi_values-fi.arsc.flat
+│   │   │       ├── values-fr-rCA_values-fr-rCA.arsc.flat
+│   │   │       ├── values-fr_values-fr.arsc.flat
+│   │   │       ├── values-gl_values-gl.arsc.flat
+│   │   │       ├── values-gu_values-gu.arsc.flat
+│   │   │       ├── values-hi_values-hi.arsc.flat
+│   │   │       ├── values-hr_values-hr.arsc.flat
+│   │   │       ├── values-hu_values-hu.arsc.flat
+│   │   │       ├── values-hy_values-hy.arsc.flat
+│   │   │       ├── values-in_values-in.arsc.flat
+│   │   │       ├── values-is_values-is.arsc.flat
+│   │   │       ├── values-it_values-it.arsc.flat
+│   │   │       ├── values-iw_values-iw.arsc.flat
+│   │   │       ├── values-ja_values-ja.arsc.flat
+│   │   │       ├── values-ka_values-ka.arsc.flat
+│   │   │       ├── values-kk_values-kk.arsc.flat
+│   │   │       ├── values-km_values-km.arsc.flat
+│   │   │       ├── values-kn_values-kn.arsc.flat
+│   │   │       ├── values-ko_values-ko.arsc.flat
+│   │   │       ├── values-ky_values-ky.arsc.flat
+│   │   │       ├── values-lo_values-lo.arsc.flat
+│   │   │       ├── values-lt_values-lt.arsc.flat
+│   │   │       ├── values-lv_values-lv.arsc.flat
+│   │   │       ├── values-mk_values-mk.arsc.flat
+│   │   │       ├── values-ml_values-ml.arsc.flat
+│   │   │       ├── values-mn_values-mn.arsc.flat
+│   │   │       ├── values-mr_values-mr.arsc.flat
+│   │   │       ├── values-ms_values-ms.arsc.flat
+│   │   │       ├── values-my_values-my.arsc.flat
+│   │   │       ├── values-nb_values-nb.arsc.flat
+│   │   │       ├── values-ne_values-ne.arsc.flat
+│   │   │       ├── values-nl_values-nl.arsc.flat
+│   │   │       ├── values-or_values-or.arsc.flat
+│   │   │       ├── values-pa_values-pa.arsc.flat
+│   │   │       ├── values-pl_values-pl.arsc.flat
+│   │   │       ├── values-pt-rBR_values-pt-rBR.arsc.flat
+│   │   │       ├── values-pt-rPT_values-pt-rPT.arsc.flat
+│   │   │       ├── values-pt_values-pt.arsc.flat
+│   │   │       ├── values-ro_values-ro.arsc.flat
+│   │   │       ├── values-ru_values-ru.arsc.flat
+│   │   │       ├── values-si_values-si.arsc.flat
+│   │   │       ├── values-sk_values-sk.arsc.flat
+│   │   │       ├── values-sl_values-sl.arsc.flat
+│   │   │       ├── values-sq_values-sq.arsc.flat
+│   │   │       ├── values-sr_values-sr.arsc.flat
+│   │   │       ├── values-sv_values-sv.arsc.flat
+│   │   │       ├── values-sw_values-sw.arsc.flat
+│   │   │       ├── values-ta_values-ta.arsc.flat
+│   │   │       ├── values-te_values-te.arsc.flat
+│   │   │       ├── values-th_values-th.arsc.flat
+│   │   │       ├── values-tl_values-tl.arsc.flat
+│   │   │       ├── values-tr_values-tr.arsc.flat
+│   │   │       ├── values-uk_values-uk.arsc.flat
+│   │   │       ├── values-ur_values-ur.arsc.flat
+│   │   │       ├── values-uz_values-uz.arsc.flat
+│   │   │       ├── values-v18_values-v18.arsc.flat
+│   │   │       ├── values-v21_values-v21.arsc.flat
+│   │   │       ├── values-v28_values-v28.arsc.flat
+│   │   │       ├── values-vi_values-vi.arsc.flat
+│   │   │       ├── values-zh-rCN_values-zh-rCN.arsc.flat
+│   │   │       ├── values-zh-rHK_values-zh-rHK.arsc.flat
+│   │   │       ├── values-zh-rTW_values-zh-rTW.arsc.flat
+│   │   │       ├── values-zu_values-zu.arsc.flat
+│   │   │       └── values_values.arsc.flat
+│   │   ├── merged_res_blame_folder
+│   │   │   ├── debug
+│   │   │   │   └── out
+│   │   │   └── debugAndroidTest
+│   │   │       └── out
+│   │   ├── merged_shaders
+│   │   │   ├── debug
+│   │   │   │   └── out
+│   │   │   └── debugAndroidTest
+│   │   │       └── out
+│   │   ├── mixed_scope_dex_archive
+│   │   │   └── debug
+│   │   │       └── out
+│   │   ├── navigation_json
+│   │   │   └── debug
+│   │   │       └── navigation.json
+│   │   ├── packaged_manifests
+│   │   │   ├── debug
+│   │   │   │   ├── AndroidManifest.xml
+│   │   │   │   └── output-metadata.json
+│   │   │   └── debugAndroidTest
+│   │   │       ├── AndroidManifest.xml
+│   │   │       └── output-metadata.json
+│   │   ├── packaged_res
+│   │   │   └── debug
+│   │   │       ├── drawable
+│   │   │       ├── mipmap-anydpi-v26
+│   │   │       ├── mipmap-hdpi-v4
+│   │   │       ├── mipmap-mdpi-v4
+│   │   │       ├── mipmap-xhdpi-v4
+│   │   │       ├── mipmap-xxhdpi-v4
+│   │   │       ├── mipmap-xxxhdpi-v4
+│   │   │       ├── values
+│   │   │       ├── values-en
+│   │   │       ├── values-night-v8
+│   │   │       └── xml
+│   │   ├── processed_res
+│   │   │   ├── debug
+│   │   │   │   └── out
+│   │   │   └── debugAndroidTest
+│   │   │       └── out
+│   │   ├── project_dex_archive
+│   │   │   └── debug
+│   │   │       └── out
+│   │   ├── runtime_symbol_list
+│   │   │   ├── debug
+│   │   │   │   └── R.txt
+│   │   │   └── debugAndroidTest
+│   │   │       └── R.txt
+│   │   ├── signing_config_versions
+│   │   │   ├── debug
+│   │   │   │   └── signing-config-versions.json
+│   │   │   └── debugAndroidTest
+│   │   │       └── signing-config-versions.json
+│   │   ├── source_set_path_map
+│   │   │   ├── debug
+│   │   │   │   └── file-map.txt
+│   │   │   └── debugAndroidTest
+│   │   │       └── file-map.txt
+│   │   ├── stable_resource_ids_file
+│   │   │   └── debug
+│   │   │       └── stableIds.txt
+│   │   ├── stripped_native_libs
+│   │   │   └── debug
+│   │   │       └── out
+│   │   ├── sub_project_dex_archive
+│   │   │   └── debug
+│   │   │       └── out
+│   │   ├── symbol_list_with_package_name
+│   │   │   ├── debug
+│   │   │   │   └── package-aware-r.txt
+│   │   │   └── debugAndroidTest
+│   │   │       └── package-aware-r.txt
+│   │   ├── tmp
+│   │   │   └── manifest
+│   │   │       └── androidTest
+│   │   ├── validate_signing_config
+│   │   │   ├── debug
+│   │   │   └── debugAndroidTest
+│   │   └── variant_model
+│   │       └── debug
+│   │           └── variant_model.json
+│   ├── kotlin
+│   │   ├── compileDebugKotlin
+│   │   │   ├── cacheable
+│   │   │   │   ├── caches-jvm
+│   │   │   │   └── last-build.bin
+│   │   │   ├── classpath-snapshot
+│   │   │   │   └── shrunk-classpath-snapshot.bin
+│   │   │   └── local-state
+│   │   │       └── build-history.bin
+│   │   └── kspDebugKotlin
+│   │       ├── cacheable
+│   │       ├── classpath-snapshot
+│   │       └── local-state
+│   ├── kspCaches
+│   │   └── debug
+│   │       ├── ap-classpath-entries.bin
+│   │       ├── backups
+│   │       │   └── java
+│   │       ├── caches.uptodate
+│   │       ├── classLookups
+│   │       │   ├── counters.tab
+│   │       │   ├── file-to-id.tab
+│   │       │   ├── file-to-id.tab.keystream
+│   │       │   ├── file-to-id.tab.keystream.len
+│   │       │   ├── file-to-id.tab.len
+│   │       │   ├── file-to-id.tab.values.at
+│   │       │   ├── file-to-id.tab_i
+│   │       │   ├── file-to-id.tab_i.len
+│   │       │   ├── id-to-file.tab
+│   │       │   ├── id-to-file.tab.keystream
+│   │       │   ├── id-to-file.tab.keystream.len
+│   │       │   ├── id-to-file.tab.len
+│   │       │   ├── id-to-file.tab.values.at
+│   │       │   ├── id-to-file.tab_i
+│   │       │   ├── id-to-file.tab_i.len
+│   │       │   ├── lookups.tab
+│   │       │   ├── lookups.tab.keystream
+│   │       │   ├── lookups.tab.keystream.len
+│   │       │   ├── lookups.tab.len
+│   │       │   ├── lookups.tab.values.at
+│   │       │   ├── lookups.tab_i
+│   │       │   └── lookups.tab_i.len
+│   │       ├── classpath-entries.bin
+│   │       ├── classpath-structure.bin
+│   │       ├── logs
+│   │       ├── sealed
+│   │       ├── sourceToOutputs
+│   │       ├── symbolLookups
+│   │       │   ├── counters.tab
+│   │       │   ├── file-to-id.tab
+│   │       │   ├── file-to-id.tab.keystream
+│   │       │   ├── file-to-id.tab.keystream.len
+│   │       │   ├── file-to-id.tab.len
+│   │       │   ├── file-to-id.tab.values.at
+│   │       │   ├── file-to-id.tab_i
+│   │       │   ├── file-to-id.tab_i.len
+│   │       │   ├── id-to-file.tab
+│   │       │   ├── id-to-file.tab.keystream
+│   │       │   ├── id-to-file.tab.keystream.len
+│   │       │   ├── id-to-file.tab.len
+│   │       │   ├── id-to-file.tab.values.at
+│   │       │   ├── id-to-file.tab_i
+│   │       │   ├── id-to-file.tab_i.len
+│   │       │   ├── lookups.tab
+│   │       │   ├── lookups.tab.keystream
+│   │       │   ├── lookups.tab.keystream.len
+│   │       │   ├── lookups.tab.len
+│   │       │   ├── lookups.tab.values.at
+│   │       │   ├── lookups.tab_i
+│   │       │   └── lookups.tab_i.len
+│   │       └── symbols
+│   ├── outputs
+│   │   └── logs
+│   │       └── manifest-merger-debug-report.txt
+│   └── tmp
+│       ├── compileDebugJavaWithJavac
+│       │   ├── compileTransaction
+│       │   │   ├── backup-dir
+│       │   │   └── stash-dir
+│       │   └── previous-compilation-data.bin
+│       └── kotlin-classes
+│           └── debug
+│               ├── META-INF
+│               └── no
+├── build.gradle.kts
+├── proguard-rules.pro
+├── prosjektstruktur.txt
+├── prosjektstrukturkomplett.txt
+├── sampledata
+├── schemas
+│   └── no.steffenhove.betongkalkulator.ui.model.AppDatabase
+│       ├── 1.json
+│       └── 2.json
+└── src
+    ├── androidTest
+    │   └── java
+    │       └── no
+    │           └── steffenhove
+    ├── main
+    │   ├── AndroidManifest.xml
+    │   ├── assets
+    │   │   └── overskjaering_interpolert.json
+    │   ├── java
+    │   │   └── no
+    │   │       └── steffenhove
+    │   └── res
+    │       ├── drawable
+    │       │   ├── ic_launcher_background.xml
+    │       │   └── ic_launcher_foreground.xml
+    │       ├── mipmap-anydpi-v26
+    │       │   ├── ic_launcher.xml
+    │       │   └── ic_launcher_round.xml
+    │       ├── mipmap-hdpi
+    │       │   ├── ic_launcher.webp
+    │       │   └── ic_launcher_round.webp
+    │       ├── mipmap-mdpi
+    │       │   ├── ic_launcher.webp
+    │       │   └── ic_launcher_round.webp
+    │       ├── mipmap-xhdpi
+    │       │   ├── ic_launcher.webp
+    │       │   └── ic_launcher_round.webp
+    │       ├── mipmap-xxhdpi
+    │       │   ├── ic_launcher.webp
+    │       │   └── ic_launcher_round.webp
+    │       ├── mipmap-xxxhdpi
+    │       │   ├── ic_launcher.webp
+    │       │   └── ic_launcher_round.webp
+    │       ├── navigation
+    │       ├── prosjektstruktur7.txt
+    │       ├── values
+    │       │   ├── attrs.xml
+    │       │   ├── colors.xml
+    │       │   ├── strings.xml
+    │       │   ├── styles.xml
+    │       │   └── themes.xml
+    │       ├── values-da-rDK
+    │       ├── values-en
+    │       │   └── strings.xml
+    │       ├── values-nb
+    │       ├── values-night
+    │       │   ├── colors.xml
+    │       │   └── themes.xml
+    │       ├── values-sv-rSE
+    │       └── xml
+    │           ├── backup_rules.xml
+    │           └── data_extraction_rules.xml
+    └── test
+        └── java
+            └── no
+                └── steffenhove
+
+269 directories, 363 files

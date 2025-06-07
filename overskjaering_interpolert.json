@@ -1,0 +1,1276 @@
+[
+  {
+    "bladeSize": 600,
+    "betongtykkelse_cm": 15,
+    "minSkjaeringCm": 8.0,
+    "maksSkjaeringCm": 10.0,
+    "minBorehullMm": 90.0
+  },
+  {
+    "bladeSize": 600,
+    "betongtykkelse_cm": 16,
+    "minSkjaeringCm": 8.4,
+    "maksSkjaeringCm": 10.5,
+    "minBorehullMm": 91.0
+  },
+  {
+    "bladeSize": 600,
+    "betongtykkelse_cm": 17,
+    "minSkjaeringCm": 8.8,
+    "maksSkjaeringCm": 11.0,
+    "minBorehullMm": 92.0
+  },
+  {
+    "bladeSize": 600,
+    "betongtykkelse_cm": 18,
+    "minSkjaeringCm": 9.2,
+    "maksSkjaeringCm": 11.5,
+    "minBorehullMm": 93.0
+  },
+  {
+    "bladeSize": 600,
+    "betongtykkelse_cm": 19,
+    "minSkjaeringCm": 9.6,
+    "maksSkjaeringCm": 12.0,
+    "minBorehullMm": 94.0
+  },
+  {
+    "bladeSize": 600,
+    "betongtykkelse_cm": 20,
+    "minSkjaeringCm": 10.0,
+    "maksSkjaeringCm": 12.5,
+    "minBorehullMm": 95.0
+  },
+  {
+    "bladeSize": 600,
+    "betongtykkelse_cm": 21,
+    "minSkjaeringCm": 10.4,
+    "maksSkjaeringCm": 13.0,
+    "minBorehullMm": 96.0
+  },
+  {
+    "bladeSize": 600,
+    "betongtykkelse_cm": 22,
+    "minSkjaeringCm": 10.8,
+    "maksSkjaeringCm": 13.5,
+    "minBorehullMm": 97.0
+  },
+  {
+    "bladeSize": 600,
+    "betongtykkelse_cm": 23,
+    "minSkjaeringCm": 11.2,
+    "maksSkjaeringCm": 14.0,
+    "minBorehullMm": 98.0
+  },
+  {
+    "bladeSize": 600,
+    "betongtykkelse_cm": 24,
+    "minSkjaeringCm": 11.6,
+    "maksSkjaeringCm": 14.5,
+    "minBorehullMm": 99.0
+  },
+  {
+    "bladeSize": 600,
+    "betongtykkelse_cm": 25,
+    "minSkjaeringCm": 12.0,
+    "maksSkjaeringCm": 15.0,
+    "minBorehullMm": 100.0
+  },
+  {
+    "bladeSize": 600,
+    "betongtykkelse_cm": 26,
+    "minSkjaeringCm": 12.4,
+    "maksSkjaeringCm": 15.5,
+    "minBorehullMm": 101.0
+  },
+  {
+    "bladeSize": 600,
+    "betongtykkelse_cm": 27,
+    "minSkjaeringCm": 12.8,
+    "maksSkjaeringCm": 16.0,
+    "minBorehullMm": 102.0
+  },
+  {
+    "bladeSize": 600,
+    "betongtykkelse_cm": 28,
+    "minSkjaeringCm": 13.2,
+    "maksSkjaeringCm": 16.5,
+    "minBorehullMm": 103.0
+  },
+  {
+    "bladeSize": 600,
+    "betongtykkelse_cm": 29,
+    "minSkjaeringCm": 13.6,
+    "maksSkjaeringCm": 17.0,
+    "minBorehullMm": 104.0
+  },
+  {
+    "bladeSize": 600,
+    "betongtykkelse_cm": 30,
+    "minSkjaeringCm": 14.0,
+    "maksSkjaeringCm": 17.5,
+    "minBorehullMm": 105.0
+  },
+  {
+    "bladeSize": 600,
+    "betongtykkelse_cm": 31,
+    "minSkjaeringCm": 14.2,
+    "maksSkjaeringCm": 18.0,
+    "minBorehullMm": 106.0
+  },
+  {
+    "bladeSize": 600,
+    "betongtykkelse_cm": 32,
+    "minSkjaeringCm": 14.4,
+    "maksSkjaeringCm": 18.5,
+    "minBorehullMm": 107.0
+  },
+  {
+    "bladeSize": 600,
+    "betongtykkelse_cm": 33,
+    "minSkjaeringCm": 14.6,
+    "maksSkjaeringCm": 19.0,
+    "minBorehullMm": 108.0
+  },
+  {
+    "bladeSize": 600,
+    "betongtykkelse_cm": 34,
+    "minSkjaeringCm": 14.8,
+    "maksSkjaeringCm": 19.5,
+    "minBorehullMm": 109.0
+  },
+  {
+    "bladeSize": 600,
+    "betongtykkelse_cm": 35,
+    "minSkjaeringCm": 15.0,
+    "maksSkjaeringCm": 20.0,
+    "minBorehullMm": 110.0
+  },
+  {
+    "bladeSize": 600,
+    "betongtykkelse_cm": 36,
+    "minSkjaeringCm": 15.2,
+    "maksSkjaeringCm": 20.3,
+    "minBorehullMm": 111.0
+  },
+  {
+    "bladeSize": 600,
+    "betongtykkelse_cm": 37,
+    "minSkjaeringCm": 15.4,
+    "maksSkjaeringCm": 20.6,
+    "minBorehullMm": 112.0
+  },
+  {
+    "bladeSize": 600,
+    "betongtykkelse_cm": 38,
+    "minSkjaeringCm": 15.6,
+    "maksSkjaeringCm": 20.9,
+    "minBorehullMm": 113.0
+  },
+  {
+    "bladeSize": 600,
+    "betongtykkelse_cm": 39,
+    "minSkjaeringCm": 15.8,
+    "maksSkjaeringCm": 21.2,
+    "minBorehullMm": 114.0
+  },
+  {
+    "bladeSize": 600,
+    "betongtykkelse_cm": 40,
+    "minSkjaeringCm": 16.0,
+    "maksSkjaeringCm": 21.5,
+    "minBorehullMm": 115.0
+  },
+  {
+    "bladeSize": 800,
+    "betongtykkelse_cm": 15,
+    "minSkjaeringCm": 9.5,
+    "maksSkjaeringCm": 13.0,
+    "minBorehullMm": 100.0
+  },
+  {
+    "bladeSize": 800,
+    "betongtykkelse_cm": 16,
+    "minSkjaeringCm": 10.2,
+    "maksSkjaeringCm": 13.8,
+    "minBorehullMm": 102.0
+  },
+  {
+    "bladeSize": 800,
+    "betongtykkelse_cm": 17,
+    "minSkjaeringCm": 10.9,
+    "maksSkjaeringCm": 14.6,
+    "minBorehullMm": 104.0
+  },
+  {
+    "bladeSize": 800,
+    "betongtykkelse_cm": 18,
+    "minSkjaeringCm": 11.6,
+    "maksSkjaeringCm": 15.4,
+    "minBorehullMm": 106.0
+  },
+  {
+    "bladeSize": 800,
+    "betongtykkelse_cm": 19,
+    "minSkjaeringCm": 12.3,
+    "maksSkjaeringCm": 16.2,
+    "minBorehullMm": 108.0
+  },
+  {
+    "bladeSize": 800,
+    "betongtykkelse_cm": 20,
+    "minSkjaeringCm": 13.0,
+    "maksSkjaeringCm": 17.0,
+    "minBorehullMm": 110.0
+  },
+  {
+    "bladeSize": 800,
+    "betongtykkelse_cm": 21,
+    "minSkjaeringCm": 13.8,
+    "maksSkjaeringCm": 17.9,
+    "minBorehullMm": 112.0
+  },
+  {
+    "bladeSize": 800,
+    "betongtykkelse_cm": 22,
+    "minSkjaeringCm": 14.6,
+    "maksSkjaeringCm": 18.8,
+    "minBorehullMm": 114.0
+  },
+  {
+    "bladeSize": 800,
+    "betongtykkelse_cm": 23,
+    "minSkjaeringCm": 15.4,
+    "maksSkjaeringCm": 19.7,
+    "minBorehullMm": 116.0
+  },
+  {
+    "bladeSize": 800,
+    "betongtykkelse_cm": 24,
+    "minSkjaeringCm": 16.2,
+    "maksSkjaeringCm": 20.6,
+    "minBorehullMm": 118.0
+  },
+  {
+    "bladeSize": 800,
+    "betongtykkelse_cm": 25,
+    "minSkjaeringCm": 17.0,
+    "maksSkjaeringCm": 21.5,
+    "minBorehullMm": 120.0
+  },
+  {
+    "bladeSize": 800,
+    "betongtykkelse_cm": 26,
+    "minSkjaeringCm": 17.8,
+    "maksSkjaeringCm": 22.4,
+    "minBorehullMm": 122.0
+  },
+  {
+    "bladeSize": 800,
+    "betongtykkelse_cm": 27,
+    "minSkjaeringCm": 18.6,
+    "maksSkjaeringCm": 23.3,
+    "minBorehullMm": 124.0
+  },
+  {
+    "bladeSize": 800,
+    "betongtykkelse_cm": 28,
+    "minSkjaeringCm": 19.4,
+    "maksSkjaeringCm": 24.2,
+    "minBorehullMm": 126.0
+  },
+  {
+    "bladeSize": 800,
+    "betongtykkelse_cm": 29,
+    "minSkjaeringCm": 20.2,
+    "maksSkjaeringCm": 25.1,
+    "minBorehullMm": 128.0
+  },
+  {
+    "bladeSize": 800,
+    "betongtykkelse_cm": 30,
+    "minSkjaeringCm": 21.0,
+    "maksSkjaeringCm": 26.0,
+    "minBorehullMm": 130.0
+  },
+  {
+    "bladeSize": 800,
+    "betongtykkelse_cm": 31,
+    "minSkjaeringCm": 21.6,
+    "maksSkjaeringCm": 26.9,
+    "minBorehullMm": 132.0
+  },
+  {
+    "bladeSize": 800,
+    "betongtykkelse_cm": 32,
+    "minSkjaeringCm": 22.2,
+    "maksSkjaeringCm": 27.8,
+    "minBorehullMm": 134.0
+  },
+  {
+    "bladeSize": 800,
+    "betongtykkelse_cm": 33,
+    "minSkjaeringCm": 22.8,
+    "maksSkjaeringCm": 28.7,
+    "minBorehullMm": 136.0
+  },
+  {
+    "bladeSize": 800,
+    "betongtykkelse_cm": 34,
+    "minSkjaeringCm": 23.4,
+    "maksSkjaeringCm": 29.6,
+    "minBorehullMm": 138.0
+  },
+  {
+    "bladeSize": 800,
+    "betongtykkelse_cm": 35,
+    "minSkjaeringCm": 24.0,
+    "maksSkjaeringCm": 30.5,
+    "minBorehullMm": 140.0
+  },
+  {
+    "bladeSize": 800,
+    "betongtykkelse_cm": 36,
+    "minSkjaeringCm": 24.4,
+    "maksSkjaeringCm": 31.2,
+    "minBorehullMm": 142.0
+  },
+  {
+    "bladeSize": 800,
+    "betongtykkelse_cm": 37,
+    "minSkjaeringCm": 24.8,
+    "maksSkjaeringCm": 31.9,
+    "minBorehullMm": 144.0
+  },
+  {
+    "bladeSize": 800,
+    "betongtykkelse_cm": 38,
+    "minSkjaeringCm": 25.2,
+    "maksSkjaeringCm": 32.6,
+    "minBorehullMm": 146.0
+  },
+  {
+    "bladeSize": 800,
+    "betongtykkelse_cm": 39,
+    "minSkjaeringCm": 25.6,
+    "maksSkjaeringCm": 33.3,
+    "minBorehullMm": 148.0
+  },
+  {
+    "bladeSize": 800,
+    "betongtykkelse_cm": 40,
+    "minSkjaeringCm": 26.0,
+    "maksSkjaeringCm": 34.0,
+    "minBorehullMm": 150.0
+  },
+  {
+    "bladeSize": 900,
+    "betongtykkelse_cm": 15,
+    "minSkjaeringCm": 10.0,
+    "maksSkjaeringCm": 14.5,
+    "minBorehullMm": 105.0
+  },
+  {
+    "bladeSize": 900,
+    "betongtykkelse_cm": 16,
+    "minSkjaeringCm": 10.8,
+    "maksSkjaeringCm": 15.4,
+    "minBorehullMm": 107.0
+  },
+  {
+    "bladeSize": 900,
+    "betongtykkelse_cm": 17,
+    "minSkjaeringCm": 11.6,
+    "maksSkjaeringCm": 16.3,
+    "minBorehullMm": 109.0
+  },
+  {
+    "bladeSize": 900,
+    "betongtykkelse_cm": 18,
+    "minSkjaeringCm": 12.4,
+    "maksSkjaeringCm": 17.2,
+    "minBorehullMm": 111.0
+  },
+  {
+    "bladeSize": 900,
+    "betongtykkelse_cm": 19,
+    "minSkjaeringCm": 13.2,
+    "maksSkjaeringCm": 18.1,
+    "minBorehullMm": 113.0
+  },
+  {
+    "bladeSize": 900,
+    "betongtykkelse_cm": 20,
+    "minSkjaeringCm": 14.0,
+    "maksSkjaeringCm": 19.0,
+    "minBorehullMm": 115.0
+  },
+  {
+    "bladeSize": 900,
+    "betongtykkelse_cm": 21,
+    "minSkjaeringCm": 14.8,
+    "maksSkjaeringCm": 20.0,
+    "minBorehullMm": 117.0
+  },
+  {
+    "bladeSize": 900,
+    "betongtykkelse_cm": 22,
+    "minSkjaeringCm": 15.6,
+    "maksSkjaeringCm": 21.0,
+    "minBorehullMm": 119.0
+  },
+  {
+    "bladeSize": 900,
+    "betongtykkelse_cm": 23,
+    "minSkjaeringCm": 16.4,
+    "maksSkjaeringCm": 22.0,
+    "minBorehullMm": 121.0
+  },
+  {
+    "bladeSize": 900,
+    "betongtykkelse_cm": 24,
+    "minSkjaeringCm": 17.2,
+    "maksSkjaeringCm": 23.0,
+    "minBorehullMm": 123.0
+  },
+  {
+    "bladeSize": 900,
+    "betongtykkelse_cm": 25,
+    "minSkjaeringCm": 18.0,
+    "maksSkjaeringCm": 24.0,
+    "minBorehullMm": 125.0
+  },
+  {
+    "bladeSize": 900,
+    "betongtykkelse_cm": 26,
+    "minSkjaeringCm": 18.8,
+    "maksSkjaeringCm": 24.9,
+    "minBorehullMm": 127.0
+  },
+  {
+    "bladeSize": 900,
+    "betongtykkelse_cm": 27,
+    "minSkjaeringCm": 19.6,
+    "maksSkjaeringCm": 25.8,
+    "minBorehullMm": 129.0
+  },
+  {
+    "bladeSize": 900,
+    "betongtykkelse_cm": 28,
+    "minSkjaeringCm": 20.4,
+    "maksSkjaeringCm": 26.7,
+    "minBorehullMm": 131.0
+  },
+  {
+    "bladeSize": 900,
+    "betongtykkelse_cm": 29,
+    "minSkjaeringCm": 21.2,
+    "maksSkjaeringCm": 27.6,
+    "minBorehullMm": 133.0
+  },
+  {
+    "bladeSize": 900,
+    "betongtykkelse_cm": 30,
+    "minSkjaeringCm": 22.0,
+    "maksSkjaeringCm": 28.5,
+    "minBorehullMm": 135.0
+  },
+  {
+    "bladeSize": 900,
+    "betongtykkelse_cm": 31,
+    "minSkjaeringCm": 22.6,
+    "maksSkjaeringCm": 29.4,
+    "minBorehullMm": 137.0
+  },
+  {
+    "bladeSize": 900,
+    "betongtykkelse_cm": 32,
+    "minSkjaeringCm": 23.2,
+    "maksSkjaeringCm": 30.3,
+    "minBorehullMm": 139.0
+  },
+  {
+    "bladeSize": 900,
+    "betongtykkelse_cm": 33,
+    "minSkjaeringCm": 23.8,
+    "maksSkjaeringCm": 31.2,
+    "minBorehullMm": 141.0
+  },
+  {
+    "bladeSize": 900,
+    "betongtykkelse_cm": 34,
+    "minSkjaeringCm": 24.4,
+    "maksSkjaeringCm": 32.1,
+    "minBorehullMm": 143.0
+  },
+  {
+    "bladeSize": 900,
+    "betongtykkelse_cm": 35,
+    "minSkjaeringCm": 25.0,
+    "maksSkjaeringCm": 33.0,
+    "minBorehullMm": 145.0
+  },
+  {
+    "bladeSize": 900,
+    "betongtykkelse_cm": 36,
+    "minSkjaeringCm": 25.4,
+    "maksSkjaeringCm": 33.6,
+    "minBorehullMm": 147.0
+  },
+  {
+    "bladeSize": 900,
+    "betongtykkelse_cm": 37,
+    "minSkjaeringCm": 25.8,
+    "maksSkjaeringCm": 34.2,
+    "minBorehullMm": 149.0
+  },
+  {
+    "bladeSize": 900,
+    "betongtykkelse_cm": 38,
+    "minSkjaeringCm": 26.2,
+    "maksSkjaeringCm": 34.8,
+    "minBorehullMm": 151.0
+  },
+  {
+    "bladeSize": 900,
+    "betongtykkelse_cm": 39,
+    "minSkjaeringCm": 26.6,
+    "maksSkjaeringCm": 35.4,
+    "minBorehullMm": 153.0
+  },
+  {
+    "bladeSize": 900,
+    "betongtykkelse_cm": 40,
+    "minSkjaeringCm": 27.0,
+    "maksSkjaeringCm": 36.0,
+    "minBorehullMm": 155.0
+  },
+  {
+    "bladeSize": 1000,
+    "betongtykkelse_cm": 15,
+    "minSkjaeringCm": 11.0,
+    "maksSkjaeringCm": 16.0,
+    "minBorehullMm": 110.0
+  },
+  {
+    "bladeSize": 1000,
+    "betongtykkelse_cm": 16,
+    "minSkjaeringCm": 11.8,
+    "maksSkjaeringCm": 17.0,
+    "minBorehullMm": 112.0
+  },
+  {
+    "bladeSize": 1000,
+    "betongtykkelse_cm": 17,
+    "minSkjaeringCm": 12.6,
+    "maksSkjaeringCm": 18.0,
+    "minBorehullMm": 114.0
+  },
+  {
+    "bladeSize": 1000,
+    "betongtykkelse_cm": 18,
+    "minSkjaeringCm": 13.4,
+    "maksSkjaeringCm": 19.0,
+    "minBorehullMm": 116.0
+  },
+  {
+    "bladeSize": 1000,
+    "betongtykkelse_cm": 19,
+    "minSkjaeringCm": 14.2,
+    "maksSkjaeringCm": 20.0,
+    "minBorehullMm": 118.0
+  },
+  {
+    "bladeSize": 1000,
+    "betongtykkelse_cm": 20,
+    "minSkjaeringCm": 15.0,
+    "maksSkjaeringCm": 21.0,
+    "minBorehullMm": 120.0
+  },
+  {
+    "bladeSize": 1000,
+    "betongtykkelse_cm": 21,
+    "minSkjaeringCm": 15.8,
+    "maksSkjaeringCm": 22.0,
+    "minBorehullMm": 122.0
+  },
+  {
+    "bladeSize": 1000,
+    "betongtykkelse_cm": 22,
+    "minSkjaeringCm": 16.6,
+    "maksSkjaeringCm": 23.0,
+    "minBorehullMm": 124.0
+  },
+  {
+    "bladeSize": 1000,
+    "betongtykkelse_cm": 23,
+    "minSkjaeringCm": 17.4,
+    "maksSkjaeringCm": 24.0,
+    "minBorehullMm": 126.0
+  },
+  {
+    "bladeSize": 1000,
+    "betongtykkelse_cm": 24,
+    "minSkjaeringCm": 18.2,
+    "maksSkjaeringCm": 25.0,
+    "minBorehullMm": 128.0
+  },
+  {
+    "bladeSize": 1000,
+    "betongtykkelse_cm": 25,
+    "minSkjaeringCm": 19.0,
+    "maksSkjaeringCm": 26.0,
+    "minBorehullMm": 130.0
+  },
+  {
+    "bladeSize": 1000,
+    "betongtykkelse_cm": 26,
+    "minSkjaeringCm": 19.8,
+    "maksSkjaeringCm": 27.0,
+    "minBorehullMm": 132.0
+  },
+  {
+    "bladeSize": 1000,
+    "betongtykkelse_cm": 27,
+    "minSkjaeringCm": 20.6,
+    "maksSkjaeringCm": 28.0,
+    "minBorehullMm": 134.0
+  },
+  {
+    "bladeSize": 1000,
+    "betongtykkelse_cm": 28,
+    "minSkjaeringCm": 21.4,
+    "maksSkjaeringCm": 29.0,
+    "minBorehullMm": 136.0
+  },
+  {
+    "bladeSize": 1000,
+    "betongtykkelse_cm": 29,
+    "minSkjaeringCm": 22.2,
+    "maksSkjaeringCm": 30.0,
+    "minBorehullMm": 138.0
+  },
+  {
+    "bladeSize": 1000,
+    "betongtykkelse_cm": 30,
+    "minSkjaeringCm": 23.0,
+    "maksSkjaeringCm": 31.0,
+    "minBorehullMm": 140.0
+  },
+  {
+    "bladeSize": 1000,
+    "betongtykkelse_cm": 31,
+    "minSkjaeringCm": 23.6,
+    "maksSkjaeringCm": 31.9,
+    "minBorehullMm": 142.0
+  },
+  {
+    "bladeSize": 1000,
+    "betongtykkelse_cm": 32,
+    "minSkjaeringCm": 24.2,
+    "maksSkjaeringCm": 32.8,
+    "minBorehullMm": 144.0
+  },
+  {
+    "bladeSize": 1000,
+    "betongtykkelse_cm": 33,
+    "minSkjaeringCm": 24.8,
+    "maksSkjaeringCm": 33.7,
+    "minBorehullMm": 146.0
+  },
+  {
+    "bladeSize": 1000,
+    "betongtykkelse_cm": 34,
+    "minSkjaeringCm": 25.4,
+    "maksSkjaeringCm": 34.6,
+    "minBorehullMm": 148.0
+  },
+  {
+    "bladeSize": 1000,
+    "betongtykkelse_cm": 35,
+    "minSkjaeringCm": 26.0,
+    "maksSkjaeringCm": 35.5,
+    "minBorehullMm": 150.0
+  },
+  {
+    "bladeSize": 1000,
+    "betongtykkelse_cm": 36,
+    "minSkjaeringCm": 26.4,
+    "maksSkjaeringCm": 36.2,
+    "minBorehullMm": 152.0
+  },
+  {
+    "bladeSize": 1000,
+    "betongtykkelse_cm": 37,
+    "minSkjaeringCm": 26.8,
+    "maksSkjaeringCm": 36.9,
+    "minBorehullMm": 154.0
+  },
+  {
+    "bladeSize": 1000,
+    "betongtykkelse_cm": 38,
+    "minSkjaeringCm": 27.2,
+    "maksSkjaeringCm": 37.6,
+    "minBorehullMm": 156.0
+  },
+  {
+    "bladeSize": 1000,
+    "betongtykkelse_cm": 39,
+    "minSkjaeringCm": 27.6,
+    "maksSkjaeringCm": 38.3,
+    "minBorehullMm": 158.0
+  },
+  {
+    "bladeSize": 1000,
+    "betongtykkelse_cm": 40,
+    "minSkjaeringCm": 28.0,
+    "maksSkjaeringCm": 39.0,
+    "minBorehullMm": 160.0
+  },
+  {
+    "bladeSize": 1200,
+    "betongtykkelse_cm": 15,
+    "minSkjaeringCm": 12.5,
+    "maksSkjaeringCm": 18.0,
+    "minBorehullMm": 120.0
+  },
+  {
+    "bladeSize": 1200,
+    "betongtykkelse_cm": 16,
+    "minSkjaeringCm": 13.4,
+    "maksSkjaeringCm": 19.2,
+    "minBorehullMm": 122.0
+  },
+  {
+    "bladeSize": 1200,
+    "betongtykkelse_cm": 17,
+    "minSkjaeringCm": 14.3,
+    "maksSkjaeringCm": 20.4,
+    "minBorehullMm": 124.0
+  },
+  {
+    "bladeSize": 1200,
+    "betongtykkelse_cm": 18,
+    "minSkjaeringCm": 15.2,
+    "maksSkjaeringCm": 21.6,
+    "minBorehullMm": 126.0
+  },
+  {
+    "bladeSize": 1200,
+    "betongtykkelse_cm": 19,
+    "minSkjaeringCm": 16.1,
+    "maksSkjaeringCm": 22.8,
+    "minBorehullMm": 128.0
+  },
+  {
+    "bladeSize": 1200,
+    "betongtykkelse_cm": 20,
+    "minSkjaeringCm": 17.0,
+    "maksSkjaeringCm": 24.0,
+    "minBorehullMm": 130.0
+  },
+  {
+    "bladeSize": 1200,
+    "betongtykkelse_cm": 21,
+    "minSkjaeringCm": 17.8,
+    "maksSkjaeringCm": 25.2,
+    "minBorehullMm": 132.0
+  },
+  {
+    "bladeSize": 1200,
+    "betongtykkelse_cm": 22,
+    "minSkjaeringCm": 18.6,
+    "maksSkjaeringCm": 26.4,
+    "minBorehullMm": 134.0
+  },
+  {
+    "bladeSize": 1200,
+    "betongtykkelse_cm": 23,
+    "minSkjaeringCm": 19.4,
+    "maksSkjaeringCm": 27.6,
+    "minBorehullMm": 136.0
+  },
+  {
+    "bladeSize": 1200,
+    "betongtykkelse_cm": 24,
+    "minSkjaeringCm": 20.2,
+    "maksSkjaeringCm": 28.8,
+    "minBorehullMm": 138.0
+  },
+  {
+    "bladeSize": 1200,
+    "betongtykkelse_cm": 25,
+    "minSkjaeringCm": 21.0,
+    "maksSkjaeringCm": 30.0,
+    "minBorehullMm": 140.0
+  },
+  {
+    "bladeSize": 1200,
+    "betongtykkelse_cm": 26,
+    "minSkjaeringCm": 22.0,
+    "maksSkjaeringCm": 31.2,
+    "minBorehullMm": 142.0
+  },
+  {
+    "bladeSize": 1200,
+    "betongtykkelse_cm": 27,
+    "minSkjaeringCm": 23.0,
+    "maksSkjaeringCm": 32.4,
+    "minBorehullMm": 144.0
+  },
+  {
+    "bladeSize": 1200,
+    "betongtykkelse_cm": 28,
+    "minSkjaeringCm": 24.0,
+    "maksSkjaeringCm": 33.6,
+    "minBorehullMm": 146.0
+  },
+  {
+    "bladeSize": 1200,
+    "betongtykkelse_cm": 29,
+    "minSkjaeringCm": 25.0,
+    "maksSkjaeringCm": 34.8,
+    "minBorehullMm": 148.0
+  },
+  {
+    "bladeSize": 1200,
+    "betongtykkelse_cm": 30,
+    "minSkjaeringCm": 26.0,
+    "maksSkjaeringCm": 36.0,
+    "minBorehullMm": 150.0
+  },
+  {
+    "bladeSize": 1200,
+    "betongtykkelse_cm": 31,
+    "minSkjaeringCm": 26.8,
+    "maksSkjaeringCm": 37.2,
+    "minBorehullMm": 152.0
+  },
+  {
+    "bladeSize": 1200,
+    "betongtykkelse_cm": 32,
+    "minSkjaeringCm": 27.6,
+    "maksSkjaeringCm": 38.4,
+    "minBorehullMm": 154.0
+  },
+  {
+    "bladeSize": 1200,
+    "betongtykkelse_cm": 33,
+    "minSkjaeringCm": 28.4,
+    "maksSkjaeringCm": 39.6,
+    "minBorehullMm": 156.0
+  },
+  {
+    "bladeSize": 1200,
+    "betongtykkelse_cm": 34,
+    "minSkjaeringCm": 29.2,
+    "maksSkjaeringCm": 40.8,
+    "minBorehullMm": 158.0
+  },
+  {
+    "bladeSize": 1200,
+    "betongtykkelse_cm": 35,
+    "minSkjaeringCm": 30.0,
+    "maksSkjaeringCm": 42.0,
+    "minBorehullMm": 160.0
+  },
+  {
+    "bladeSize": 1200,
+    "betongtykkelse_cm": 36,
+    "minSkjaeringCm": 30.8,
+    "maksSkjaeringCm": 43.2,
+    "minBorehullMm": 162.0
+  },
+  {
+    "bladeSize": 1200,
+    "betongtykkelse_cm": 37,
+    "minSkjaeringCm": 31.6,
+    "maksSkjaeringCm": 44.4,
+    "minBorehullMm": 164.0
+  },
+  {
+    "bladeSize": 1200,
+    "betongtykkelse_cm": 38,
+    "minSkjaeringCm": 32.4,
+    "maksSkjaeringCm": 45.6,
+    "minBorehullMm": 166.0
+  },
+  {
+    "bladeSize": 1200,
+    "betongtykkelse_cm": 39,
+    "minSkjaeringCm": 33.2,
+    "maksSkjaeringCm": 46.8,
+    "minBorehullMm": 168.0
+  },
+  {
+    "bladeSize": 1200,
+    "betongtykkelse_cm": 40,
+    "minSkjaeringCm": 34.0,
+    "maksSkjaeringCm": 48.0,
+    "minBorehullMm": 170.0
+  },
+  {
+    "bladeSize": 1500,
+    "betongtykkelse_cm": 15,
+    "minSkjaeringCm": 13.5,
+    "maksSkjaeringCm": 19.0,
+    "minBorehullMm": 125.0
+  },
+  {
+    "bladeSize": 1500,
+    "betongtykkelse_cm": 16,
+    "minSkjaeringCm": 14.5,
+    "maksSkjaeringCm": 20.2,
+    "minBorehullMm": 127.0
+  },
+  {
+    "bladeSize": 1500,
+    "betongtykkelse_cm": 17,
+    "minSkjaeringCm": 15.5,
+    "maksSkjaeringCm": 21.4,
+    "minBorehullMm": 129.0
+  },
+  {
+    "bladeSize": 1500,
+    "betongtykkelse_cm": 18,
+    "minSkjaeringCm": 16.5,
+    "maksSkjaeringCm": 22.6,
+    "minBorehullMm": 131.0
+  },
+  {
+    "bladeSize": 1500,
+    "betongtykkelse_cm": 19,
+    "minSkjaeringCm": 17.5,
+    "maksSkjaeringCm": 23.8,
+    "minBorehullMm": 133.0
+  },
+  {
+    "bladeSize": 1500,
+    "betongtykkelse_cm": 20,
+    "minSkjaeringCm": 18.5,
+    "maksSkjaeringCm": 25.0,
+    "minBorehullMm": 135.0
+  },
+  {
+    "bladeSize": 1500,
+    "betongtykkelse_cm": 21,
+    "minSkjaeringCm": 19.4,
+    "maksSkjaeringCm": 26.2,
+    "minBorehullMm": 137.0
+  },
+  {
+    "bladeSize": 1500,
+    "betongtykkelse_cm": 22,
+    "minSkjaeringCm": 20.3,
+    "maksSkjaeringCm": 27.4,
+    "minBorehullMm": 139.0
+  },
+  {
+    "bladeSize": 1500,
+    "betongtykkelse_cm": 23,
+    "minSkjaeringCm": 21.2,
+    "maksSkjaeringCm": 28.6,
+    "minBorehullMm": 141.0
+  },
+  {
+    "bladeSize": 1500,
+    "betongtykkelse_cm": 24,
+    "minSkjaeringCm": 22.1,
+    "maksSkjaeringCm": 29.8,
+    "minBorehullMm": 143.0
+  },
+  {
+    "bladeSize": 1500,
+    "betongtykkelse_cm": 25,
+    "minSkjaeringCm": 23.0,
+    "maksSkjaeringCm": 31.0,
+    "minBorehullMm": 145.0
+  },
+  {
+    "bladeSize": 1500,
+    "betongtykkelse_cm": 26,
+    "minSkjaeringCm": 24.0,
+    "maksSkjaeringCm": 32.2,
+    "minBorehullMm": 147.0
+  },
+  {
+    "bladeSize": 1500,
+    "betongtykkelse_cm": 27,
+    "minSkjaeringCm": 25.0,
+    "maksSkjaeringCm": 33.4,
+    "minBorehullMm": 149.0
+  },
+  {
+    "bladeSize": 1500,
+    "betongtykkelse_cm": 28,
+    "minSkjaeringCm": 26.0,
+    "maksSkjaeringCm": 34.6,
+    "minBorehullMm": 151.0
+  },
+  {
+    "bladeSize": 1500,
+    "betongtykkelse_cm": 29,
+    "minSkjaeringCm": 27.0,
+    "maksSkjaeringCm": 35.8,
+    "minBorehullMm": 153.0
+  },
+  {
+    "bladeSize": 1500,
+    "betongtykkelse_cm": 30,
+    "minSkjaeringCm": 28.0,
+    "maksSkjaeringCm": 37.0,
+    "minBorehullMm": 155.0
+  },
+  {
+    "bladeSize": 1500,
+    "betongtykkelse_cm": 31,
+    "minSkjaeringCm": 29.0,
+    "maksSkjaeringCm": 38.2,
+    "minBorehullMm": 157.0
+  },
+  {
+    "bladeSize": 1500,
+    "betongtykkelse_cm": 32,
+    "minSkjaeringCm": 30.0,
+    "maksSkjaeringCm": 39.4,
+    "minBorehullMm": 159.0
+  },
+  {
+    "bladeSize": 1500,
+    "betongtykkelse_cm": 33,
+    "minSkjaeringCm": 31.0,
+    "maksSkjaeringCm": 40.6,
+    "minBorehullMm": 161.0
+  },
+  {
+    "bladeSize": 1500,
+    "betongtykkelse_cm": 34,
+    "minSkjaeringCm": 32.0,
+    "maksSkjaeringCm": 41.8,
+    "minBorehullMm": 163.0
+  },
+  {
+    "bladeSize": 1500,
+    "betongtykkelse_cm": 35,
+    "minSkjaeringCm": 33.0,
+    "maksSkjaeringCm": 43.0,
+    "minBorehullMm": 165.0
+  },
+  {
+    "bladeSize": 1500,
+    "betongtykkelse_cm": 36,
+    "minSkjaeringCm": 34.0,
+    "maksSkjaeringCm": 44.2,
+    "minBorehullMm": 167.0
+  },
+  {
+    "bladeSize": 1500,
+    "betongtykkelse_cm": 37,
+    "minSkjaeringCm": 35.0,
+    "maksSkjaeringCm": 45.4,
+    "minBorehullMm": 169.0
+  },
+  {
+    "bladeSize": 1500,
+    "betongtykkelse_cm": 38,
+    "minSkjaeringCm": 36.0,
+    "maksSkjaeringCm": 46.6,
+    "minBorehullMm": 171.0
+  },
+  {
+    "bladeSize": 1500,
+    "betongtykkelse_cm": 39,
+    "minSkjaeringCm": 37.0,
+    "maksSkjaeringCm": 47.8,
+    "minBorehullMm": 173.0
+  },
+  {
+    "bladeSize": 1500,
+    "betongtykkelse_cm": 40,
+    "minSkjaeringCm": 38.0,
+    "maksSkjaeringCm": 49.0,
+    "minBorehullMm": 175.0
+  },
+  {
+    "bladeSize": 1600,
+    "betongtykkelse_cm": 15,
+    "minSkjaeringCm": 14.0,
+    "maksSkjaeringCm": 20.0,
+    "minBorehullMm": 130.0
+  },
+  {
+    "bladeSize": 1600,
+    "betongtykkelse_cm": 16,
+    "minSkjaeringCm": 15.0,
+    "maksSkjaeringCm": 21.2,
+    "minBorehullMm": 132.0
+  },
+  {
+    "bladeSize": 1600,
+    "betongtykkelse_cm": 17,
+    "minSkjaeringCm": 16.0,
+    "maksSkjaeringCm": 22.4,
+    "minBorehullMm": 134.0
+  },
+  {
+    "bladeSize": 1600,
+    "betongtykkelse_cm": 18,
+    "minSkjaeringCm": 17.0,
+    "maksSkjaeringCm": 23.6,
+    "minBorehullMm": 136.0
+  },
+  {
+    "bladeSize": 1600,
+    "betongtykkelse_cm": 19,
+    "minSkjaeringCm": 18.0,
+    "maksSkjaeringCm": 24.8,
+    "minBorehullMm": 138.0
+  },
+  {
+    "bladeSize": 1600,
+    "betongtykkelse_cm": 20,
+    "minSkjaeringCm": 19.0,
+    "maksSkjaeringCm": 26.0,
+    "minBorehullMm": 140.0
+  },
+  {
+    "bladeSize": 1600,
+    "betongtykkelse_cm": 21,
+    "minSkjaeringCm": 20.0,
+    "maksSkjaeringCm": 27.2,
+    "minBorehullMm": 142.0
+  },
+  {
+    "bladeSize": 1600,
+    "betongtykkelse_cm": 22,
+    "minSkjaeringCm": 21.0,
+    "maksSkjaeringCm": 28.4,
+    "minBorehullMm": 144.0
+  },
+  {
+    "bladeSize": 1600,
+    "betongtykkelse_cm": 23,
+    "minSkjaeringCm": 22.0,
+    "maksSkjaeringCm": 29.6,
+    "minBorehullMm": 146.0
+  },
+  {
+    "bladeSize": 1600,
+    "betongtykkelse_cm": 24,
+    "minSkjaeringCm": 23.0,
+    "maksSkjaeringCm": 30.8,
+    "minBorehullMm": 148.0
+  },
+  {
+    "bladeSize": 1600,
+    "betongtykkelse_cm": 25,
+    "minSkjaeringCm": 24.0,
+    "maksSkjaeringCm": 32.0,
+    "minBorehullMm": 150.0
+  },
+  {
+    "bladeSize": 1600,
+    "betongtykkelse_cm": 26,
+    "minSkjaeringCm": 25.0,
+    "maksSkjaeringCm": 33.2,
+    "minBorehullMm": 152.0
+  },
+  {
+    "bladeSize": 1600,
+    "betongtykkelse_cm": 27,
+    "minSkjaeringCm": 26.0,
+    "maksSkjaeringCm": 34.4,
+    "minBorehullMm": 154.0
+  },
+  {
+    "bladeSize": 1600,
+    "betongtykkelse_cm": 28,
+    "minSkjaeringCm": 27.0,
+    "maksSkjaeringCm": 35.6,
+    "minBorehullMm": 156.0
+  },
+  {
+    "bladeSize": 1600,
+    "betongtykkelse_cm": 29,
+    "minSkjaeringCm": 28.0,
+    "maksSkjaeringCm": 36.8,
+    "minBorehullMm": 158.0
+  },
+  {
+    "bladeSize": 1600,
+    "betongtykkelse_cm": 30,
+    "minSkjaeringCm": 29.0,
+    "maksSkjaeringCm": 38.0,
+    "minBorehullMm": 160.0
+  },
+  {
+    "bladeSize": 1600,
+    "betongtykkelse_cm": 31,
+    "minSkjaeringCm": 30.0,
+    "maksSkjaeringCm": 39.2,
+    "minBorehullMm": 162.0
+  },
+  {
+    "bladeSize": 1600,
+    "betongtykkelse_cm": 32,
+    "minSkjaeringCm": 31.0,
+    "maksSkjaeringCm": 40.4,
+    "minBorehullMm": 164.0
+  },
+  {
+    "bladeSize": 1600,
+    "betongtykkelse_cm": 33,
+    "minSkjaeringCm": 32.0,
+    "maksSkjaeringCm": 41.6,
+    "minBorehullMm": 166.0
+  },
+  {
+    "bladeSize": 1600,
+    "betongtykkelse_cm": 34,
+    "minSkjaeringCm": 33.0,
+    "maksSkjaeringCm": 42.8,
+    "minBorehullMm": 168.0
+  },
+  {
+    "bladeSize": 1600,
+    "betongtykkelse_cm": 35,
+    "minSkjaeringCm": 34.0,
+    "maksSkjaeringCm": 44.0,
+    "minBorehullMm": 170.0
+  },
+  {
+    "bladeSize": 1600,
+    "betongtykkelse_cm": 36,
+    "minSkjaeringCm": 35.0,
+    "maksSkjaeringCm": 45.2,
+    "minBorehullMm": 172.0
+  },
+  {
+    "bladeSize": 1600,
+    "betongtykkelse_cm": 37,
+    "minSkjaeringCm": 36.0,
+    "maksSkjaeringCm": 46.4,
+    "minBorehullMm": 174.0
+  },
+  {
+    "bladeSize": 1600,
+    "betongtykkelse_cm": 38,
+    "minSkjaeringCm": 37.0,
+    "maksSkjaeringCm": 47.6,
+    "minBorehullMm": 176.0
+  },
+  {
+    "bladeSize": 1600,
+    "betongtykkelse_cm": 39,
+    "minSkjaeringCm": 38.0,
+    "maksSkjaeringCm": 48.8,
+    "minBorehullMm": 178.0
+  },
+  {
+    "bladeSize": 1600,
+    "betongtykkelse_cm": 40,
+    "minSkjaeringCm": 39.0,
+    "maksSkjaeringCm": 50.0,
+    "minBorehullMm": 180.0
+  }
+]
