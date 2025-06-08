@@ -12,26 +12,48 @@ import no.steffenhove.betongkalkulator.ui.utils.loadOverskjaeringData
 class OverskjaeringViewModel(application: Application) : AndroidViewModel(application) {
 
     private val overskjaeringDataList: List<OverskjaeringData> = loadOverskjaeringData(application)
+        .sortedBy { it.bladeSize } // Sorterer listen for å enkelt finne neste større blad
 
     private val _result = MutableStateFlow<OverskjaeringResult?>(null)
     val result: StateFlow<OverskjaeringResult?> = _result
 
+    // Ny StateFlow for feilmeldinger/info-meldinger
+    private val _infoMessage = MutableStateFlow<String?>(null)
+    val infoMessage: StateFlow<String?> = _infoMessage
+
     fun calculate(bladDiameter: Int, betongTykkelseCm: Int) {
-        Log.d("OverskjæringDebug", "ViewModel.calculate kalt med Blad: $bladDiameter, Tykkelse: $betongTykkelseCm")
-        Log.d("OverskjæringDebug", "Totalt antall blad-datatyper lastet: ${overskjaeringDataList.size}")
+        // Nullstill tidligere meldinger og resultater
+        _infoMessage.value = null
+        _result.value = null
 
         val bladDataMap = overskjaeringDataList.find { it.bladeSize == bladDiameter }?.dataPoints
-        Log.d("OverskjæringDebug", "Fant data for blad $bladDiameter? ${bladDataMap != null}")
 
         if (bladDataMap == null) {
-            _result.value = null; return
+            _infoMessage.value = "Fant ikke data for Ø$bladDiameter mm blad."
+            return
         }
+
+        // --- NY LOGIKK: Sjekk om bladet er stort nok ---
+        val maksTykkelseForBlad = bladDataMap.keys.maxOrNull() ?: 0
+        if (betongTykkelseCm > maksTykkelseForBlad) {
+            // Finn det minste bladet som er større enn det valgte, og som kan håndtere tykkelsen
+            val anbefaltBlad = overskjaeringDataList.find {
+                it.bladeSize > bladDiameter && (it.dataPoints.keys.maxOrNull() ?: 0) >= betongTykkelseCm
+            }
+
+            val anbefaltBladTekst = anbefaltBlad?.let { "Ø${it.bladeSize} mm eller større." } ?: "et større blad."
+
+            _infoMessage.value = "Ø$bladDiameter mm er for lite for $betongTykkelseCm cm betong.\nAnbefalt blad: $anbefaltBladTekst"
+            return
+        }
+        // ---------------------------------------------
 
         val lavereTykkelseKey = bladDataMap.keys.filter { it <= betongTykkelseCm }.maxOrNull()
         val hoyereTykkelseKey = bladDataMap.keys.filter { it >= betongTykkelseCm }.minOrNull()
 
         if (lavereTykkelseKey == null || hoyereTykkelseKey == null) {
-            _result.value = null; return
+            _infoMessage.value = "Ugyldig betongtykkelse for det valgte bladet."
+            return
         }
 
         val (overkapp1_cm, minSkjaering1_cm) = bladDataMap[lavereTykkelseKey]!!
