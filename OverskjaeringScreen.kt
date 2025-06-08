@@ -13,6 +13,11 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+// Nye importer for å håndtere livssyklus-hendelser
+import androidx.compose.ui.platform.LocalLifecycleOwner
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+// ---------------------------------------------
 import no.steffenhove.betongkalkulator.ui.components.AppDropdown
 import no.steffenhove.betongkalkulator.ui.utils.SharedPrefsUtils
 import no.steffenhove.betongkalkulator.ui.utils.convertToMeters
@@ -26,14 +31,34 @@ fun OverskjaeringScreen(viewModel: OverskjaeringViewModel = viewModel()) {
 
     var thicknessInputTfv by rememberSaveable(stateSaver = TextFieldValue.Saver) { mutableStateOf(TextFieldValue("")) }
     var selectedBlade by rememberSaveable { mutableStateOf("800") }
-
+    
     val blades = listOf("600", "700", "750", "800", "900", "1000", "1200", "1500", "1600")
 
-    val unitSystem = SharedPrefsUtils.getUnitSystem(context)
-    val unitOptions = if (unitSystem == "Imperialsk") listOf("inch", "foot") else listOf("mm", "cm", "m")
-    var selectedUnit by rememberSaveable { mutableStateOf("cm") } // Setter "cm" som en stabil default
+    // --- FIKS: Gjør unitSystem til en "State" som kan oppdateres ---
+    var unitSystem by remember { mutableStateOf(SharedPrefsUtils.getUnitSystem(context)) }
+    
+    // Observerer livssyklusen til skjermen
+    val lifecycleOwner = LocalLifecycleOwner.current
+    DisposableEffect(lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            // Hver gang skjermen blir aktiv igjen (f.eks. tilbake fra innstillinger)
+            if (event == Lifecycle.Event.ON_RESUME) {
+                // ... leser vi innstillingen på nytt.
+                unitSystem = SharedPrefsUtils.getUnitSystem(context)
+            }
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+        
+        // Rydder opp observeren når skjermen lukkes
+        onDispose {
+            lifecycleOwner.lifecycle.removeObserver(observer)
+        }
+    }
+    // ----------------------------------------------------------------
 
-    // Sørger for at selectedUnit er gyldig hvis unitSystem endres
+    val unitOptions = if (unitSystem == "Imperialsk") listOf("inch", "foot") else listOf("mm", "cm", "m")
+    var selectedUnit by rememberSaveable { mutableStateOf("cm") }
+
     LaunchedEffect(unitOptions) {
         if (selectedUnit !in unitOptions) {
             selectedUnit = unitOptions.first()
@@ -46,7 +71,6 @@ fun OverskjaeringScreen(viewModel: OverskjaeringViewModel = viewModel()) {
             Toast.makeText(context, "Tykkelse kan ikke være tom", Toast.LENGTH_SHORT).show()
             return
         }
-        // ... (resten av valideringslogikken er uendret) ...
         val tykkelseMeter = convertToMeters(thicknessNormalized, selectedUnit)
         val tykkelseCm = tykkelseMeter?.let { (it * 100).toInt() }
         if (tykkelseCm == null) {
@@ -59,16 +83,16 @@ fun OverskjaeringScreen(viewModel: OverskjaeringViewModel = viewModel()) {
     Column(
         modifier = Modifier.fillMaxSize().padding(16.dp)
     ) {
-        // --- Input-seksjonen er uendret ---
+        // UI-delen er uendret, den vil nå automatisk oppdatere seg
+        // når 'unitSystem' og 'unitOptions' endres.
+        
         AppDropdown(label = "Bladdiameter", options = blades, selectedOption = selectedBlade, onOptionSelected = { selectedBlade = it })
         Spacer(modifier = Modifier.height(16.dp))
         OutlinedTextField(
-            value = thicknessInputTfv,
-            onValueChange = { thicknessInputTfv = it },
+            value = thicknessInputTfv, onValueChange = { thicknessInputTfv = it },
             keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Number),
             label = { Text("Betongtykkelse (f.eks. 25)") },
-            modifier = Modifier.fillMaxWidth(),
-            singleLine = true
+            modifier = Modifier.fillMaxWidth(), singleLine = true
         )
         Spacer(modifier = Modifier.height(8.dp))
         AppDropdown(label = "Enhet for tykkelse", options = unitOptions, selectedOption = selectedUnit, onOptionSelected = { selectedUnit = it })
@@ -79,7 +103,6 @@ fun OverskjaeringScreen(viewModel: OverskjaeringViewModel = viewModel()) {
         ) { Text("Beregn") }
         Spacer(modifier = Modifier.height(24.dp))
 
-        // --- Start på den nye logikken for visning av resultat ---
         if (infoMessage != null) {
             Text(
                 text = infoMessage!!,
@@ -88,42 +111,19 @@ fun OverskjaeringScreen(viewModel: OverskjaeringViewModel = viewModel()) {
             )
         } else {
             result?.let { res ->
-                val minSkjaeringCm = res.minSkjaeringCm
-                val maksSkjaeringCm = res.maksSkjaeringCm // Dette er overkapp-lengden
-
-                // Viser Min/Maks skjæring i samme enhet som brukeren tastet inn
-                when (selectedUnit) {
-                    "mm" -> {
-                        Text("Min. skjæring: ${"%.0f".format(minSkjaeringCm * 10)} mm")
-                        Text("Maks. skjæring: ${"%.0f".format(maksSkjaeringCm * 10)} mm")
-                    }
-                    "cm" -> {
-                        Text("Min. skjæring: ${"%.1f".format(minSkjaeringCm)} cm")
-                        Text("Maks. skjæring: ${"%.1f".format(maksSkjaeringCm)} cm")
-                    }
-                    "m" -> {
-                        Text("Min. skjæring: ${"%.2f".format(minSkjaeringCm / 100)} m")
-                        Text("Maks. skjæring: ${"%.2f".format(maksSkjaeringCm / 100)} m")
-                    }
-                    "inch" -> {
-                        Text("Min. skjæring: ${"%.2f".format(minSkjaeringCm / 2.54f)} inch")
-                        Text("Maks. skjæring: ${"%.2f".format(maksSkjaeringCm / 2.54f)} inch")
-                    }
-                    "foot" -> {
-                        Text("Min. skjæring: ${"%.2f".format(minSkjaeringCm / 30.48f)} foot")
-                        Text("Maks. skjæring: ${"%.2f".format(maksSkjaeringCm / 30.48f)} foot")
-                    }
-                }
-
-                // Viser Min. borehull alltid i mm for metrisk, og tommer for imperialsk
                 if (unitSystem == "Imperialsk") {
+                    val minSkjaeringInch = res.minSkjaeringCm / 2.54f
+                    val maksSkjaeringInch = res.maksSkjaeringCm / 2.54f
                     val minBorehullInch = res.minBorehullMm / 25.4f
+                    Text("Min. skjæring: ${"%.1f".format(minSkjaeringInch)} inch")
+                    Text("Maks. skjæring: ${"%.1f".format(maksSkjaeringInch)} inch")
                     Text("Min. borehull: ${"%.1f".format(minBorehullInch)} inch")
                 } else {
+                    Text("Min. skjæring: ${"%.1f".format(res.minSkjaeringCm)} cm")
+                    Text("Maks. skjæring: ${"%.1f".format(res.maksSkjaeringCm)} cm")
                     Text("Min. borehull: ${"%.0f".format(res.minBorehullMm)} mm")
                 }
             }
         }
-        // --- Slutt på den nye logikken ---
     }
 }
