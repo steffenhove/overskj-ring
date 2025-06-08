@@ -20,43 +20,33 @@ class OverskjaeringViewModel(application: Application) : AndroidViewModel(applic
         Log.d("OverskjæringDebug", "ViewModel.calculate kalt med Blad: $bladDiameter, Tykkelse: $betongTykkelseCm")
         Log.d("OverskjæringDebug", "Totalt antall blad-datatyper lastet: ${overskjaeringDataList.size}")
 
-        val bladDataMap = overskjaeringDataList.find { it.bladeSize == bladDiameter }?.data
+        val bladDataMap = overskjaeringDataList.find { it.bladeSize == bladDiameter }?.dataPoints
         Log.d("OverskjæringDebug", "Fant data for blad $bladDiameter? ${bladDataMap != null}")
 
         if (bladDataMap == null) {
-            _result.value = null
-            return
+            _result.value = null; return
         }
 
         val lavereTykkelseKey = bladDataMap.keys.filter { it <= betongTykkelseCm }.maxOrNull()
         val hoyereTykkelseKey = bladDataMap.keys.filter { it >= betongTykkelseCm }.minOrNull()
 
         if (lavereTykkelseKey == null || hoyereTykkelseKey == null) {
-            _result.value = null
-            return
+            _result.value = null; return
         }
 
-        val values1 = bladDataMap[lavereTykkelseKey]!!
-        val values2 = bladDataMap[hoyereTykkelseKey]!!
-
-        // Her antar vi at 'overcutCm' er "Maks. skjæring" (A-verdi for borehull)
-        // og 'minCutCm' er "Min. skjæring" (B-verdi / potensiell dybde)
-        val overkapp1 = values1.overcutCm
-        val minSkjaering1 = values1.minCutCm
-
-        val overkapp2 = values2.overcutCm
-        val minSkjaering2 = values2.minCutCm
+        val (overkapp1_cm, minSkjaering1_cm) = bladDataMap[lavereTykkelseKey]!!
+        val (overkapp2_cm, minSkjaering2_cm) = bladDataMap[hoyereTykkelseKey]!!
 
         val interpolertOverkappCm: Float
         val interpolertMinSkjaeringCm: Float
 
         if (lavereTykkelseKey == hoyereTykkelseKey) {
-            interpolertOverkappCm = overkapp1
-            interpolertMinSkjaeringCm = minSkjaering1
+            interpolertOverkappCm = overkapp1_cm
+            interpolertMinSkjaeringCm = minSkjaering1_cm
         } else {
             val t = (betongTykkelseCm - lavereTykkelseKey).toFloat() / (hoyereTykkelseKey - lavereTykkelseKey).toFloat()
-            interpolertOverkappCm = overkapp1 + t * (overkapp2 - overkapp1)
-            interpolertMinSkjaeringCm = minSkjaering1 + t * (minSkjaering2 - minSkjaering1)
+            interpolertOverkappCm = overkapp1_cm + t * (overkapp2_cm - overkapp1_cm)
+            interpolertMinSkjaeringCm = minSkjaering1_cm + t * (minSkjaering2_cm - minSkjaering1_cm)
         }
 
         val minBorehullMm = if (interpolertOverkappCm > 0) interpolertOverkappCm * 10f else 0f

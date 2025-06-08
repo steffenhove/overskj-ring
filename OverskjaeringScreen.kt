@@ -103,7 +103,7 @@ fun OverskjaeringScreen(viewModel: OverskjaeringViewModel = viewModel()) {
         Button(
             onClick = {
                 // Hver kommando på sin egen linje for lesbarhet
-                Toast.makeText(context, "Beregn-knappen virker!", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(context, "Beregn-knappen virker!", Toast.LENGTH_SHORT).show()
                 performCalculationAndUpdateViewModel()
             },
             modifier = Modifier.align(Alignment.End)
